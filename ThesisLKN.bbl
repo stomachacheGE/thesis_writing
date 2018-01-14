@@ -1,0 +1,143 @@
+\begin{thebibliography}{}
+
+\bibitem[Brechtel et~al., 2010]{brechtel2010recursive}
+Brechtel, S., Gindele, T., and Dillmann, R. (2010).
+\newblock Recursive importance sampling for efficient grid-based occupancy
+  filtering in dynamic environments.
+\newblock In {\em Robotics and Automation (ICRA), 2010 IEEE International
+  Conference on}, pages 3932--3938. IEEE.
+
+\bibitem[Bruce and Gordon, 2004]{bruce2004better}
+Bruce, A. and Gordon, G. (2004).
+\newblock Better motion prediction for people-tracking.
+\newblock In {\em Proc. of the Int. Conf. on Robotics \& Automation (ICRA),
+  Barcelona, Spain}.
+
+\bibitem[Cho et~al., 2014]{cho2014learning}
+Cho, K., Van~Merri{\"e}nboer, B., Gulcehre, C., Bahdanau, D., Bougares, F.,
+  Schwenk, H., and Bengio, Y. (2014).
+\newblock Learning phrase representations using rnn encoder-decoder for
+  statistical machine translation.
+\newblock {\em arXiv preprint arXiv:1406.1078}.
+
+\bibitem[Cou{\'e} et~al., 2006]{coue2006bayesian}
+Cou{\'e}, C., Pradalier, C., Laugier, C., Fraichard, T., and Bessi{\`e}re, P.
+  (2006).
+\newblock Bayesian occupancy filtering for multitarget tracking: an automotive
+  application.
+\newblock {\em The International Journal of Robotics Research}, 25(1):19--30.
+
+\bibitem[Gauvrit et~al., 1997]{gauvrit1997formulation}
+Gauvrit, H., Le~Cadre, J.-P., and Jauffret, C. (1997).
+\newblock A formulation of multitarget tracking as an incomplete data problem.
+\newblock {\em IEEE Transactions on Aerospace and Electronic Systems},
+  33(4):1242--1257.
+
+\bibitem[Gindele et~al., 2009]{gindele2009bayesian}
+Gindele, T., Brechtel, S., Schroder, J., and Dillmann, R. (2009).
+\newblock Bayesian occupancy grid filter for dynamic environments using prior
+  map knowledge.
+\newblock In {\em Intelligent Vehicles Symposium, 2009 IEEE}, pages 669--676.
+  IEEE.
+
+\bibitem[He et~al., 2016]{he2016deep}
+He, K., Zhang, X., Ren, S., and Sun, J. (2016).
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 770--778.
+
+\bibitem[Huang et~al., 2016]{huang2016densely}
+Huang, G., Liu, Z., Weinberger, K.~Q., and van~der Maaten, L. (2016).
+\newblock Densely connected convolutional networks.
+\newblock {\em arXiv preprint arXiv:1608.06993}.
+
+\bibitem[J{\'e}gou et~al., 2017]{jegou2017one}
+J{\'e}gou, S., Drozdzal, M., Vazquez, D., Romero, A., and Bengio, Y. (2017).
+\newblock The one hundred layers tiramisu: Fully convolutional densenets for
+  semantic segmentation.
+\newblock In {\em Computer Vision and Pattern Recognition Workshops (CVPRW),
+  2017 IEEE Conference on}, pages 1175--1183. IEEE.
+
+\bibitem[Kucner et~al., 2013]{kucner2013conditional}
+Kucner, T., Saarinen, J., Magnusson, M., and Lilienthal, A.~J. (2013).
+\newblock Conditional transition maps: Learning motion patterns in dynamic
+  environments.
+\newblock In {\em Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ
+  International Conference on}, pages 1196--1201. IEEE.
+
+\bibitem[Levine et~al., 2016]{levine2016learning}
+Levine, S., Pastor, P., Krizhevsky, A., Ibarz, J., and Quillen, D. (2016).
+\newblock Learning hand-eye coordination for robotic grasping with deep
+  learning and large-scale data collection.
+\newblock {\em The International Journal of Robotics Research}, page
+  0278364917710318.
+
+\bibitem[Liao et~al., 2003]{liao2003voronoi}
+Liao, L., Fox, D., Hightower, J., Kautz, H., and Schulz, D. (2003).
+\newblock Voronoi tracking: Location estimation using sparse and noisy sensor
+  data.
+\newblock In {\em Intelligent Robots and Systems, 2003.(IROS 2003).
+  Proceedings. 2003 IEEE/RSJ International Conference on}, volume~1, pages
+  723--728. IEEE.
+
+\bibitem[Llamazares et~al., 2013]{llamazares2013dynamic}
+Llamazares, A., Ivan, V., Molinos, E., Ocana, M., and Vijayakumar, S. (2013).
+\newblock Dynamic obstacle avoidance using bayesian occupancy filter and
+  approximate inference.
+\newblock {\em Sensors}, 13(3):2929--2944.
+
+\bibitem[Long et~al., 2015]{long2015fully}
+Long, J., Shelhamer, E., and Darrell, T. (2015).
+\newblock Fully convolutional networks for semantic segmentation.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 3431--3440.
+
+\bibitem[Luber et~al., 2011]{luber2011place}
+Luber, M., Diego~Tipaldi, G., and Arras, K.~O. (2011).
+\newblock Place-dependent people tracking.
+\newblock {\em The International Journal of Robotics Research}, 30(3):280--293.
+
+\bibitem[Meier and Ade, 1999]{meier1999using}
+Meier, E.~B. and Ade, F. (1999).
+\newblock Using the condensation algorithm to implement tracking for mobile
+  robots.
+\newblock In {\em Advanced Mobile Robots, 1999.(Eurobot'99) 1999 Third European
+  Workshop on}, pages 73--80. IEEE.
+
+\bibitem[Meyer-Delius et~al., 2012]{meyer2012occupancy}
+Meyer-Delius, D., Beinhofer, M., and Burgard, W. (2012).
+\newblock Occupancy grid models for robot mapping in changing environments.
+\newblock In {\em AAAI}.
+
+\bibitem[Montemerlo et~al., 2002]{montemerlo2002conditional}
+Montemerlo, M., Thrun, S., and Whittaker, W. (2002).
+\newblock Conditional particle filters for simultaneous mobile robot
+  localization and people-tracking.
+\newblock In {\em Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
+  International Conference on}, volume~1, pages 695--701. IEEE.
+
+\bibitem[Moravec and Elfes, 1985]{moravec1985high}
+Moravec, H. and Elfes, A. (1985).
+\newblock High resolution maps from wide angle sonar.
+\newblock In {\em Robotics and Automation. Proceedings. 1985 IEEE International
+  Conference on}, volume~2, pages 116--121. IEEE.
+
+\bibitem[Russakovsky et~al., 2015]{russakovsky2015imagenet}
+Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z.,
+  Karpathy, A., Khosla, A., Bernstein, M., et~al. (2015).
+\newblock Imagenet large scale visual recognition challenge.
+\newblock {\em International Journal of Computer Vision}, 115(3):211--252.
+
+\bibitem[Wang et~al., 2015]{wang2015model}
+Wang, D.~Z., Posner, I., and Newman, P. (2015).
+\newblock Model-free detection and tracking of dynamic objects with 2d lidar.
+\newblock {\em The International Journal of Robotics Research},
+  34(7):1039--1063.
+
+\bibitem[Wang et~al., 2014]{wang2014modeling}
+Wang, Z., Ambrus, R., Jensfelt, P., and Folkesson, J. (2014).
+\newblock Modeling motion patterns of dynamic objects by iohmm.
+\newblock In {\em Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ
+  International Conference on}, pages 1832--1838. IEEE.
+
+\end{thebibliography}

@@ -1,0 +1,239 @@
+% PLEASE FILL IN THE PLACEHOLDERS <...>
+%
+% Diplomarbeit/Studienarbeit/IDP von <NAME>
+% Diploma thesis of <NAME>
+%
+% Title: <TITLE>
+%        <TITLE>
+%
+\documentclass[12pt, a4paper, twoside, openright]{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PACKAGES:
+
+% Define typearea
+% a) Use automatic:
+\usepackage[BCOR1cm]{typearea}
+% b) Or use fixed: 
+%\usepackage{geometry}
+%\geometry{left=1.5cm,textwidth=18.5cm,top=1.5cm,textheight=26.5cm}
+
+% Use German :
+\usepackage[german, english]{babel}
+% Use list of tabels, etc. in table of contents:
+\usepackage{tocbibind}
+% German paragraph skip
+\usepackage{parskip}
+% Encoder:????
+%\usepackage[utf-8]{inputenc}
+\usepackage[utf8]{inputenc}
+% Use A4-paper efficiently:
+\usepackage{a4wide}
+% Index-generation
+\usepackage{makeidx}
+% Einbinden von URLs:
+\usepackage{url}
+% Include .eps-files (needed also for the LKN-logo):
+%\usepackage{epsf}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+% Special \LaTex symbols (e.g. \BibTeX):
+\usepackage{doc}
+% Include Graphic-files:
+%\usepackage{graphics}
+% Include Graphic-files:
+\usepackage{graphicx}
+% Include doc++ generated tex-files:
+%\usepackage{docxx}
+% Include PDF links
+%\usepackage[pdftex, bookmarks=true]{hyperref}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage[margin=1cm,font=small,labelfont=bf,textfont=sl]{caption}
+\usepackage{mathtools}
+\usepackage{natbib}
+
+\usepackage[pdftex,
+  bookmarks,
+  %colorlinks=false, % instead of colors, now boxes are used for links
+  colorlinks=true,
+  urlcolor=black, %blue,
+  linkcolor=black, %red, %normal internal links
+  citecolor=black, %green, %citation links
+  %pagebackref, %link from references back to page of citation
+  linktocpage, 
+  % im Inhaltsverzeichnis Link auf Seitenzahl (sonst Probleme bei langen Zeilen)
+  %breaklinks = true, % f�r Links l�nger als 1 Zeile
+  %hypertexnames = false,  % f�r Links zu Figures?
+  bookmarksopen, %open all bookmark folders
+  bookmarksnumbered, %use section numbers with bookmarks
+    pdfpagemode=UseOutlines, %show bookmarks
+  % http://www.tex.ac.uk/cgi-bin/texfaq2html?label=pdfpagelabels
+  plainpages=false, % eigene Seitenanker f�r r�mische/arabische Seitenzahlen
+  pdfpagelabels, % im Abode Reader Seitenzahl als z.B. "iii (3 von 20)" anzeigen
+% pdfstartview=FitH
+  pdfstartview=FitV
+  ]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SELF DEFINED:
+%
+% this makes list spacing much better.
+%
+\newenvironment{my_enumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}}{\end{enumerate}
+}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\sml}[1]{\mbox{\scriptsize $#1$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% OTHER SETTINGS:
+
+% Pagestyle:
+\pagestyle{headings}
+
+% Avoid 'overhang':
+\sloppy
+
+% Choose language
+\newcommand{\setlang}[1]{\selectlanguage{#1}\nonfrenchspacing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TITLE:
+
+\begin{document}
+
+\thispagestyle{empty}
+\newpage
+
+\vspace{5cm}
+\begin{center}
+    \epsfxsize=4cm
+    \epsfbox{LKN_Logo_klein.eps}
+\end{center}
+
+\parbox{15cm}{\begin{center} {\sf\bf 
+                               \Large  Technische Universität München
+                                \smallskip
+
+                               \Large Lehrstuhl für Kommunikationsnetze
+                               \smallskip
+                              }
+
+                              {\sf \large Prof. Dr.-Ing. Wolfgang Kellerer} 
+              \end{center}}  %&
+
+\vspace{4cm}
+
+\begin{center}
+        {\bf\Huge Master‘s Thesis} % Studienarbeit, Interdisziplinäres Projekt
+\end{center}
+
+\begin{center}
+        \settowidth{\baselineskip}{0.4cm}
+        {\LARGE 
+        Title of the Thesis
+        }
+\end{center}
+
+\vfill         
+{\settowidth{\baselineskip}{0.2cm}
+\large\begin{tabular}[l]{ll}
+Author: & Last Name, First Name\\
+Address: & Somestreet 007\\
+         & 12345 City\\
+         & Country\\
+Matriculation Number: & XXXXXXX\\
+Supervisor: & Supervisor Name\\
+Begin: & 01. January 1900\\
+End: & 01. January 2000
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{roman}
+
+\newcounter{pageno}
+\setcounter{pageno}{1} %titlepage = page 1, but pagenumber not printed
+\addtocounter{pageno}{1}
+
+% German abstract:
+%\include{Kurzfassung}
+% English abstract:
+\include{Abstract}
+
+
+\cleardoublepage
+\include{statement}
+
+\cleardoublepage
+\include{foreword}
+
+% Table of contents:
+\tableofcontents  
+%\include{toc}
+% % Introduction (Einleitung):
+% \include{Introduction}
+
+% % Text Body (Hauptteil)
+% % Could have multiple chaper-files, e.g.:
+% \include{Background}
+% \include{Evaluation}
+% %  Conclusions (Zusammenfassung):
+% \include{Conclusions}
+% \include{Formatting}
+
+\cleardoublepage
+\setcounter{page}{1}
+\renewcommand{\thepage}{\arabic{page}}
+
+\include{chap1}
+
+\cleardoublepage
+\include{chap2}
+
+\cleardoublepage
+\include{chap3}
+
+\cleardoublepage
+\include{chap4}
+
+\cleardoublepage
+\include{chap5}
+
+\cleardoublepage
+\include{chap6}
+
+\cleardoublepage
+\include{chap7}
+
+\cleardoublepage
+\include{Formatting}
+
+% Appendix (Anhänge), could have multiple chaper-files:
+\appendix
+\include{Appendix}
+
+% Abbreviations (Abkürzungsverzeichnis):
+\include{Abbreviations}
+
+
+% References (Literaturverzeichnis):
+% a) Style (with numbers: use unsrt):
+\bibliographystyle{apalike}
+% b) The File:
+\bibliography{Bibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,29 @@
+%!TEX root = ThesisLKN.tex
+\chapter{Literature Review} \label{chapter:2}
+
+\section{Object Tracking}
+
+\cite{wang2015model} talks about the model-free and model-based object tracking with 2D laser scan.
+
+\cite{luber2011place} has the similar idea of human tracking, but with a model-based approach. It talks about different approaches for data association.
+
+Due to the difficulties in data association, BOF\cite{coue2006bayesian} was introduced. Then introduce different variations of BOF.
+
+\section{Dynamic Environment Modeling}
+
+\subsection{Human Motion Modeling}
+
+In the early stage of human tracking, researches adopts simple and conservative motion models. \citet{montemerlo2002conditional} uses Brownian motion model for human tracking with Bayes filters.  The Brownian motion assumes people take random directions at each time step and there is no dependence between time steps. In other words, Brownian motion does not assign human dynamics with any pattern other than dispersion. As a consequence, when there is no more observations, the predictions of people locations spreads out over a large area very quickly. This is a poor estimate as we know people normally does not move randomly. A better model is the first order motion model (a.k.a. linear motion model). For example, \citet{meier1999using} used this model together with Kalman filter for human tracking. First order motion model
+
+In the early stage of human tracking, researches adopts simple and conservative motion models, like Brownian motion \citep{montemerlo2002conditional} and linear motion model \citep{meier1999using}. However, in reality people normally go from the starting point and follow some motion patterns until they reach destination instead of moving randomly according to Brownian motion. Likewise, people does not always move in the same direction as the last movement according to linear motion model, since they often need to make turns around corners. Some researchers proposed better ways to model people motion patterns. For example, \citet{bruce2004better} learns destinations by clustering real trajectories and uses a path planer to those destinations as a reference for human motion patterns. \citet{liao2003voronoi} assumes that human tend to move along Voronoi graph of the environment and therefore constraint motion patterns by Voronoi graph. 
+
+Our motion model is different to above methods in two aspects: cell dependency and learning. We represent the environment as a gird map with each cell indicating a possible location. The Voronoi graph is constructed based on a global representation of the environment. It is predefined and only well suited for applications where high-level motion clue is needed (e.g., which rooms a person has visited). This kind of motion clues are too less precise to be used for recovering a person's exact location. Instead, in order to get a finer motion model, we decompose the task of modeling human motion pattern into cell level tasks of modeling change of directions. For each cell, we learned how likely a person's moving direction changes for the next time step based on actual human trajectories. On the other hand, although a path planer to the learned destination defines an effective path, it does not necessarily cover the motion dynamics at every possible locations and assumes no dependency between these locations. One intuition we captured based on observations of people motion is that, for a cell in the map, the state of neighborhood cells is a strong indicator of its state.
+
+\subsection{M}
+
+\cite{moravec1985high} introduced grid map as a representation of environment. However, it assumes the environment is static.
+
+\cite{kucner2013conditional} talks about literatures that try to adapt grid map to dynamic environments. Notably, \cite{meyer2012occupancy} relaxes the static assumption by introducing a HMM for each cell in the map. However, those approaches assume independences between cells, which is not the case in reality. Therefore, \cite{kucner2013conditional} proposed conditional transition map which models the probabilities of exit direction conditioned on enter direction. Moreover, \cite{wang2014modeling} models dynamic environments using IOHMM, which incorporates both spatial and temporal information for modeling motion patterns.
+
+\section{Neural Networks}
+

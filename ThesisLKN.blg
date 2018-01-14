@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: ThesisLKN.aux
+A level-1 auxiliary file: Abstract.aux
+A level-1 auxiliary file: statement.aux
+A level-1 auxiliary file: foreword.aux
+A level-1 auxiliary file: chap1.aux
+A level-1 auxiliary file: chap2.aux
+A level-1 auxiliary file: chap3.aux
+A level-1 auxiliary file: chap4.aux
+A level-1 auxiliary file: chap5.aux
+A level-1 auxiliary file: chap6.aux
+A level-1 auxiliary file: chap7.aux
+A level-1 auxiliary file: Formatting.aux
+A level-1 auxiliary file: Appendix.aux
+A level-1 auxiliary file: Abbreviations.aux
+The style file: apalike.bst
+Database file #1: Bibliography.bib
+Repeated entry---line 107 of file Bibliography.bib
+ : @inproceedings{moravec1985high
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 128 of file Bibliography.bib
+ : @article{gauvrit1997formulation
+ :                                ,
+I'm skipping whatever remains of this entry
+You've used 22 entries,
+            1935 wiz_defined-function locations,
+            615 strings with 8923 characters,
+and the built_in function-call counts, 11775 in all, are:
+= -- 1198
+> -- 516
+< -- 18
++ -- 184
+- -- 180
+* -- 940
+:= -- 1864
+add.period$ -- 75
+call.type$ -- 22
+change.case$ -- 199
+chr.to.int$ -- 22
+cite$ -- 22
+duplicate$ -- 498
+empty$ -- 796
+format.name$ -- 208
+if$ -- 2456
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 22
+newline$ -- 113
+num.names$ -- 66
+pop$ -- 227
+preamble$ -- 1
+purify$ -- 199
+quote$ -- 0
+skip$ -- 404
+stack$ -- 0
+substring$ -- 846
+swap$ -- 165
+text.length$ -- 15
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 132
+warning$ -- 0
+while$ -- 90
+width$ -- 0
+write$ -- 296
+(There were 2 error messages)
