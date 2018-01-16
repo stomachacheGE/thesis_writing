@@ -1,5 +1,30 @@
 \begin{thebibliography}{}
 
+\bibitem[Arbuckle et~al., 2002]{arbuckle2002temporal}
+Arbuckle, D., Howard, A., and Mataric, M. (2002).
+\newblock Temporal occupancy grids: a method for classifying the
+  spatio-temporal properties of the environment.
+\newblock In {\em Intelligent Robots and Systems, 2002. IEEE/RSJ International
+  Conference on}, volume~1, pages 409--414. IEEE.
+
+\bibitem[Arras et~al., 2008]{arras2008efficient}
+Arras, K.~O., Grzonka, S., Luber, M., and Burgard, W. (2008).
+\newblock Efficient people tracking in laser range data using a
+  multi-hypothesis leg-tracker with adaptive occlusion probabilities.
+\newblock In {\em Robotics and Automation, 2008. ICRA 2008. IEEE International
+  Conference on}, pages 1710--1715. IEEE.
+
+\bibitem[Arras et~al., 2007]{arras2007using}
+Arras, K.~O., Mozos, O.~M., and Burgard, W. (2007).
+\newblock Using boosted features for the detection of people in 2d range data.
+\newblock In {\em Robotics and Automation, 2007 IEEE International Conference
+  on}, pages 3402--3407. IEEE.
+
+\bibitem[Biber and Duckett, 2009]{biber2009experimental}
+Biber, P. and Duckett, T. (2009).
+\newblock Experimental analysis of sample-based maps for long-term slam.
+\newblock {\em The International Journal of Robotics Research}, 28(1):20--33.
+
 \bibitem[Brechtel et~al., 2010]{brechtel2010recursive}
 Brechtel, S., Gindele, T., and Dillmann, R. (2010).
 \newblock Recursive importance sampling for efficient grid-based occupancy
@@ -26,6 +51,24 @@ Cou{\'e}, C., Pradalier, C., Laugier, C., Fraichard, T., and Bessi{\`e}re, P.
 \newblock Bayesian occupancy filtering for multitarget tracking: an automotive
   application.
 \newblock {\em The International Journal of Robotics Research}, 25(1):19--30.
+
+\bibitem[Cui et~al., 2006]{cui2006laser}
+Cui, J., Zha, H., Zhao, H., and Shibasaki, R. (2006).
+\newblock Laser-based interacting people tracking using multi-level
+  observations.
+\newblock In {\em Intelligent Robots and Systems, 2006 IEEE/RSJ International
+  Conference on}, pages 1799--1804. IEEE.
+
+\bibitem[Elfes, 1989]{elfes1989using}
+Elfes, A. (1989).
+\newblock Using occupancy grids for mobile robot perception and navigation.
+\newblock {\em Computer}, 22(6):46--57.
+
+\bibitem[Fod et~al., 2002]{fod2002laser}
+Fod, A., Howard, A., and Mataric, M. (2002).
+\newblock A laser-based people tracker.
+\newblock In {\em Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
+  International Conference on}, volume~3, pages 3024--3029. IEEE.
 
 \bibitem[Gauvrit et~al., 1997]{gauvrit1997formulation}
 Gauvrit, H., Le~Cadre, J.-P., and Jauffret, C. (1997).
@@ -57,6 +100,12 @@ J{\'e}gou, S., Drozdzal, M., Vazquez, D., Romero, A., and Bengio, Y. (2017).
   semantic segmentation.
 \newblock In {\em Computer Vision and Pattern Recognition Workshops (CVPRW),
   2017 IEEE Conference on}, pages 1175--1183. IEEE.
+
+\bibitem[Krizhevsky et~al., 2012]{krizhevsky2012imagenet}
+Krizhevsky, A., Sutskever, I., and Hinton, G.~E. (2012).
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105.
 
 \bibitem[Kucner et~al., 2013]{kucner2013conditional}
 Kucner, T., Saarinen, J., Magnusson, M., and Lilienthal, A.~J. (2013).
@@ -116,17 +165,28 @@ Montemerlo, M., Thrun, S., and Whittaker, W. (2002).
 \newblock In {\em Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
   International Conference on}, volume~1, pages 695--701. IEEE.
 
-\bibitem[Moravec and Elfes, 1985]{moravec1985high}
-Moravec, H. and Elfes, A. (1985).
-\newblock High resolution maps from wide angle sonar.
-\newblock In {\em Robotics and Automation. Proceedings. 1985 IEEE International
-  Conference on}, volume~2, pages 116--121. IEEE.
+\bibitem[Ross et~al., 2008]{ross2008incremental}
+Ross, D.~A., Lim, J., Lin, R.-S., and Yang, M.-H. (2008).
+\newblock Incremental learning for robust visual tracking.
+\newblock {\em International Journal of Computer Vision}, 77(1):125--141.
 
 \bibitem[Russakovsky et~al., 2015]{russakovsky2015imagenet}
 Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z.,
   Karpathy, A., Khosla, A., Bernstein, M., et~al. (2015).
 \newblock Imagenet large scale visual recognition challenge.
 \newblock {\em International Journal of Computer Vision}, 115(3):211--252.
+
+\bibitem[Schulz et~al., 2001]{schulz2001tracking}
+Schulz, D., Burgard, W., Fox, D., and Cremers, A.~B. (2001).
+\newblock Tracking multiple moving targets with a mobile robot using particle
+  filters and statistical data association.
+\newblock In {\em Robotics and Automation, 2001. Proceedings 2001 ICRA. IEEE
+  International Conference on}, volume~2, pages 1665--1670. IEEE.
+
+\bibitem[Simonyan and Zisserman, 2014]{simonyan2014very}
+Simonyan, K. and Zisserman, A. (2014).
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em arXiv preprint arXiv:1409.1556}.
 
 \bibitem[Wang et~al., 2015]{wang2015model}
 Wang, D.~Z., Posner, I., and Newman, P. (2015).
