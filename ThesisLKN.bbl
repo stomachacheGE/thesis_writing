@@ -1,203 +1,308 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{44}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Arbuckle et~al., 2002]{arbuckle2002temporal}
-Arbuckle, D., Howard, A., and Mataric, M. (2002).
+\bibitem[Arbuckle et~al.(2002)Arbuckle, Howard, and
+  Mataric]{arbuckle2002temporal}
+Daniel Arbuckle, Andrew Howard, and Maja Mataric.
 \newblock Temporal occupancy grids: a method for classifying the
   spatio-temporal properties of the environment.
-\newblock In {\em Intelligent Robots and Systems, 2002. IEEE/RSJ International
-  Conference on}, volume~1, pages 409--414. IEEE.
+\newblock In \emph{Intelligent Robots and Systems, 2002. IEEE/RSJ International
+  Conference on}, volume~1, pages 409--414. IEEE, 2002.
 
-\bibitem[Arras et~al., 2008]{arras2008efficient}
-Arras, K.~O., Grzonka, S., Luber, M., and Burgard, W. (2008).
+\bibitem[Arras et~al.(2007)Arras, Mozos, and Burgard]{arras2007using}
+Kai~O Arras, Oscar~Martinez Mozos, and Wolfram Burgard.
+\newblock Using boosted features for the detection of people in 2d range data.
+\newblock In \emph{Robotics and Automation, 2007 IEEE International Conference
+  on}, pages 3402--3407. IEEE, 2007.
+
+\bibitem[Arras et~al.(2008)Arras, Grzonka, Luber, and
+  Burgard]{arras2008efficient}
+Kai~O Arras, Slawomir Grzonka, Matthias Luber, and Wolfram Burgard.
 \newblock Efficient people tracking in laser range data using a
   multi-hypothesis leg-tracker with adaptive occlusion probabilities.
-\newblock In {\em Robotics and Automation, 2008. ICRA 2008. IEEE International
-  Conference on}, pages 1710--1715. IEEE.
+\newblock In \emph{Robotics and Automation, 2008. ICRA 2008. IEEE International
+  Conference on}, pages 1710--1715. IEEE, 2008.
 
-\bibitem[Arras et~al., 2007]{arras2007using}
-Arras, K.~O., Mozos, O.~M., and Burgard, W. (2007).
-\newblock Using boosted features for the detection of people in 2d range data.
-\newblock In {\em Robotics and Automation, 2007 IEEE International Conference
-  on}, pages 3402--3407. IEEE.
-
-\bibitem[Biber and Duckett, 2009]{biber2009experimental}
-Biber, P. and Duckett, T. (2009).
+\bibitem[Biber and Duckett(2009)]{biber2009experimental}
+Peter Biber and Tom Duckett.
 \newblock Experimental analysis of sample-based maps for long-term slam.
-\newblock {\em The International Journal of Robotics Research}, 28(1):20--33.
+\newblock \emph{The International Journal of Robotics Research}, 28\penalty0
+  (1):\penalty0 20--33, 2009.
 
-\bibitem[Brechtel et~al., 2010]{brechtel2010recursive}
-Brechtel, S., Gindele, T., and Dillmann, R. (2010).
+\bibitem[Brechtel et~al.(2010)Brechtel, Gindele, and
+  Dillmann]{brechtel2010recursive}
+Sebastian Brechtel, Tobias Gindele, and R{\"u}diger Dillmann.
 \newblock Recursive importance sampling for efficient grid-based occupancy
   filtering in dynamic environments.
-\newblock In {\em Robotics and Automation (ICRA), 2010 IEEE International
-  Conference on}, pages 3932--3938. IEEE.
+\newblock In \emph{Robotics and Automation (ICRA), 2010 IEEE International
+  Conference on}, pages 3932--3938. IEEE, 2010.
 
-\bibitem[Bruce and Gordon, 2004]{bruce2004better}
-Bruce, A. and Gordon, G. (2004).
+\bibitem[Bruce and Gordon(2004)]{bruce2004better}
+Allison Bruce and Geoffrey Gordon.
 \newblock Better motion prediction for people-tracking.
-\newblock In {\em Proc. of the Int. Conf. on Robotics \& Automation (ICRA),
-  Barcelona, Spain}.
+\newblock In \emph{Proc. of the Int. Conf. on Robotics \& Automation (ICRA),
+  Barcelona, Spain}, 2004.
 
-\bibitem[Cho et~al., 2014]{cho2014learning}
-Cho, K., Van~Merri{\"e}nboer, B., Gulcehre, C., Bahdanau, D., Bougares, F.,
-  Schwenk, H., and Bengio, Y. (2014).
+\bibitem[Chen et~al.(2006)Chen, Tay, Laugier, and Mekhnacha]{chen2006dynamic}
+Cheng Chen, Christopher Tay, Christian Laugier, and Kamel Mekhnacha.
+\newblock Dynamic environment modeling with gridmap: a multiple-object tracking
+  application.
+\newblock In \emph{Control, Automation, Robotics and Vision, 2006. ICARCV'06.
+  9th International Conference on}, pages 1--6. IEEE, 2006.
+
+\bibitem[Cho et~al.(2014)Cho, Van~Merri{\"e}nboer, Gulcehre, Bahdanau,
+  Bougares, Schwenk, and Bengio]{cho2014learning}
+Kyunghyun Cho, Bart Van~Merri{\"e}nboer, Caglar Gulcehre, Dzmitry Bahdanau,
+  Fethi Bougares, Holger Schwenk, and Yoshua Bengio.
 \newblock Learning phrase representations using rnn encoder-decoder for
   statistical machine translation.
-\newblock {\em arXiv preprint arXiv:1406.1078}.
+\newblock \emph{arXiv preprint arXiv:1406.1078}, 2014.
 
-\bibitem[Cou{\'e} et~al., 2006]{coue2006bayesian}
-Cou{\'e}, C., Pradalier, C., Laugier, C., Fraichard, T., and Bessi{\`e}re, P.
-  (2006).
+\bibitem[Cou{\'e} et~al.(2006)Cou{\'e}, Pradalier, Laugier, Fraichard, and
+  Bessi{\`e}re]{coue2006bayesian}
+Christophe Cou{\'e}, C{\'e}dric Pradalier, Christian Laugier, Thierry
+  Fraichard, and Pierre Bessi{\`e}re.
 \newblock Bayesian occupancy filtering for multitarget tracking: an automotive
   application.
-\newblock {\em The International Journal of Robotics Research}, 25(1):19--30.
+\newblock \emph{The International Journal of Robotics Research}, 25\penalty0
+  (1):\penalty0 19--30, 2006.
 
-\bibitem[Cui et~al., 2006]{cui2006laser}
-Cui, J., Zha, H., Zhao, H., and Shibasaki, R. (2006).
+\bibitem[Cui et~al.(2006)Cui, Zha, Zhao, and Shibasaki]{cui2006laser}
+Jinshi Cui, Hongbin Zha, Huijing Zhao, and Ryosuke Shibasaki.
 \newblock Laser-based interacting people tracking using multi-level
   observations.
-\newblock In {\em Intelligent Robots and Systems, 2006 IEEE/RSJ International
-  Conference on}, pages 1799--1804. IEEE.
+\newblock In \emph{Intelligent Robots and Systems, 2006 IEEE/RSJ International
+  Conference on}, pages 1799--1804. IEEE, 2006.
 
-\bibitem[Elfes, 1989]{elfes1989using}
-Elfes, A. (1989).
+\bibitem[De and Kautz(2017)]{de2017dynamic}
+Jinwei Gu Xiaodong Yang~Shalini De and Mello~Jan Kautz.
+\newblock Dynamic facial analysis: From bayesian filtering to recurrent neural
+  network.
+\newblock 2017.
+
+\bibitem[Elfes(1989)]{elfes1989using}
+Alberto Elfes.
 \newblock Using occupancy grids for mobile robot perception and navigation.
-\newblock {\em Computer}, 22(6):46--57.
+\newblock \emph{Computer}, 22\penalty0 (6):\penalty0 46--57, 1989.
 
-\bibitem[Fod et~al., 2002]{fod2002laser}
-Fod, A., Howard, A., and Mataric, M. (2002).
+\bibitem[Fod et~al.(2002)Fod, Howard, and Mataric]{fod2002laser}
+Ajo Fod, Andrew Howard, and MAJ Mataric.
 \newblock A laser-based people tracker.
-\newblock In {\em Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
-  International Conference on}, volume~3, pages 3024--3029. IEEE.
+\newblock In \emph{Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
+  International Conference on}, volume~3, pages 3024--3029. IEEE, 2002.
 
-\bibitem[Gauvrit et~al., 1997]{gauvrit1997formulation}
-Gauvrit, H., Le~Cadre, J.-P., and Jauffret, C. (1997).
+\bibitem[Gauvrit et~al.(1997)Gauvrit, Le~Cadre, and
+  Jauffret]{gauvrit1997formulation}
+Herv{\'e} Gauvrit, Jean-Pierre Le~Cadre, and Claude Jauffret.
 \newblock A formulation of multitarget tracking as an incomplete data problem.
-\newblock {\em IEEE Transactions on Aerospace and Electronic Systems},
-  33(4):1242--1257.
+\newblock \emph{IEEE Transactions on Aerospace and Electronic Systems},
+  33\penalty0 (4):\penalty0 1242--1257, 1997.
 
-\bibitem[Gindele et~al., 2009]{gindele2009bayesian}
-Gindele, T., Brechtel, S., Schroder, J., and Dillmann, R. (2009).
+\bibitem[Gindele et~al.(2009)Gindele, Brechtel, Schroder, and
+  Dillmann]{gindele2009bayesian}
+Tobias Gindele, Sebastian Brechtel, Joachim Schroder, and Rudiger Dillmann.
 \newblock Bayesian occupancy grid filter for dynamic environments using prior
   map knowledge.
-\newblock In {\em Intelligent Vehicles Symposium, 2009 IEEE}, pages 669--676.
-  IEEE.
+\newblock In \emph{Intelligent Vehicles Symposium, 2009 IEEE}, pages 669--676.
+  IEEE, 2009.
 
-\bibitem[He et~al., 2016]{he2016deep}
-He, K., Zhang, X., Ren, S., and Sun, J. (2016).
+\bibitem[Graves et~al.(2013)Graves, Mohamed, and Hinton]{graves2013speech}
+Alex Graves, Abdel-rahman Mohamed, and Geoffrey Hinton.
+\newblock Speech recognition with deep recurrent neural networks.
+\newblock In \emph{Acoustics, speech and signal processing (icassp), 2013 ieee
+  international conference on}, pages 6645--6649. IEEE, 2013.
+
+\bibitem[He et~al.(2015)He, Zhang, Ren, and Sun]{he2015delving}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Delving deep into rectifiers: Surpassing human-level performance on
+  imagenet classification.
+\newblock In \emph{Proceedings of the IEEE international conference on computer
+  vision}, pages 1026--1034, 2015.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{he2016deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
 \newblock Deep residual learning for image recognition.
-\newblock In {\em Proceedings of the IEEE conference on computer vision and
-  pattern recognition}, pages 770--778.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 770--778, 2016.
 
-\bibitem[Huang et~al., 2016]{huang2016densely}
-Huang, G., Liu, Z., Weinberger, K.~Q., and van~der Maaten, L. (2016).
+\bibitem[Hochreiter and Schmidhuber(1997)]{hochreiter1997long}
+Sepp Hochreiter and J{\"u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock \emph{Neural computation}, 9\penalty0 (8):\penalty0 1735--1780, 1997.
+
+\bibitem[Huang et~al.(2016)Huang, Liu, Weinberger, and van~der
+  Maaten]{huang2016densely}
+Gao Huang, Zhuang Liu, Kilian~Q Weinberger, and Laurens van~der Maaten.
 \newblock Densely connected convolutional networks.
-\newblock {\em arXiv preprint arXiv:1608.06993}.
+\newblock \emph{arXiv preprint arXiv:1608.06993}, 2016.
 
-\bibitem[J{\'e}gou et~al., 2017]{jegou2017one}
-J{\'e}gou, S., Drozdzal, M., Vazquez, D., Romero, A., and Bengio, Y. (2017).
+\bibitem[Ioffe and Szegedy(2015)]{ioffe2015batch}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  448--456, 2015.
+
+\bibitem[Jazwinski(2007)]{jazwinski2007stochastic}
+Andrew~H Jazwinski.
+\newblock \emph{Stochastic processes and filtering theory}.
+\newblock Courier Corporation, 2007.
+
+\bibitem[J{\'e}gou et~al.(2017)J{\'e}gou, Drozdzal, Vazquez, Romero, and
+  Bengio]{jegou2017one}
+Simon J{\'e}gou, Michal Drozdzal, David Vazquez, Adriana Romero, and Yoshua
+  Bengio.
 \newblock The one hundred layers tiramisu: Fully convolutional densenets for
   semantic segmentation.
-\newblock In {\em Computer Vision and Pattern Recognition Workshops (CVPRW),
-  2017 IEEE Conference on}, pages 1175--1183. IEEE.
+\newblock In \emph{Computer Vision and Pattern Recognition Workshops (CVPRW),
+  2017 IEEE Conference on}, pages 1175--1183. IEEE, 2017.
 
-\bibitem[Krizhevsky et~al., 2012]{krizhevsky2012imagenet}
-Krizhevsky, A., Sutskever, I., and Hinton, G.~E. (2012).
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
-\newblock In {\em Advances in neural information processing systems}, pages
-  1097--1105.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  1097--1105, 2012.
 
-\bibitem[Kucner et~al., 2013]{kucner2013conditional}
-Kucner, T., Saarinen, J., Magnusson, M., and Lilienthal, A.~J. (2013).
+\bibitem[Kucner et~al.(2013)Kucner, Saarinen, Magnusson, and
+  Lilienthal]{kucner2013conditional}
+Tomasz Kucner, Jari Saarinen, Martin Magnusson, and Achim~J Lilienthal.
 \newblock Conditional transition maps: Learning motion patterns in dynamic
   environments.
-\newblock In {\em Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ
-  International Conference on}, pages 1196--1201. IEEE.
+\newblock In \emph{Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ
+  International Conference on}, pages 1196--1201. IEEE, 2013.
 
-\bibitem[Levine et~al., 2016]{levine2016learning}
-Levine, S., Pastor, P., Krizhevsky, A., Ibarz, J., and Quillen, D. (2016).
+\bibitem[Levine et~al.(2016)Levine, Pastor, Krizhevsky, Ibarz, and
+  Quillen]{levine2016learning}
+Sergey Levine, Peter Pastor, Alex Krizhevsky, Julian Ibarz, and Deirdre
+  Quillen.
 \newblock Learning hand-eye coordination for robotic grasping with deep
   learning and large-scale data collection.
-\newblock {\em The International Journal of Robotics Research}, page
-  0278364917710318.
+\newblock \emph{The International Journal of Robotics Research}, page
+  0278364917710318, 2016.
 
-\bibitem[Liao et~al., 2003]{liao2003voronoi}
-Liao, L., Fox, D., Hightower, J., Kautz, H., and Schulz, D. (2003).
+\bibitem[Liao et~al.(2003)Liao, Fox, Hightower, Kautz, and
+  Schulz]{liao2003voronoi}
+Lin Liao, Dieter Fox, Jeffrey Hightower, Henry Kautz, and Dirk Schulz.
 \newblock Voronoi tracking: Location estimation using sparse and noisy sensor
   data.
-\newblock In {\em Intelligent Robots and Systems, 2003.(IROS 2003).
+\newblock In \emph{Intelligent Robots and Systems, 2003.(IROS 2003).
   Proceedings. 2003 IEEE/RSJ International Conference on}, volume~1, pages
-  723--728. IEEE.
+  723--728. IEEE, 2003.
 
-\bibitem[Llamazares et~al., 2013]{llamazares2013dynamic}
-Llamazares, A., Ivan, V., Molinos, E., Ocana, M., and Vijayakumar, S. (2013).
+\bibitem[Llamazares et~al.(2013)Llamazares, Ivan, Molinos, Ocana, and
+  Vijayakumar]{llamazares2013dynamic}
+Angel Llamazares, Vladimir Ivan, Eduardo Molinos, Manuel Ocana, and Sethu
+  Vijayakumar.
 \newblock Dynamic obstacle avoidance using bayesian occupancy filter and
   approximate inference.
-\newblock {\em Sensors}, 13(3):2929--2944.
+\newblock \emph{Sensors}, 13\penalty0 (3):\penalty0 2929--2944, 2013.
 
-\bibitem[Long et~al., 2015]{long2015fully}
-Long, J., Shelhamer, E., and Darrell, T. (2015).
+\bibitem[Long et~al.(2015)Long, Shelhamer, and Darrell]{long2015fully}
+Jonathan Long, Evan Shelhamer, and Trevor Darrell.
 \newblock Fully convolutional networks for semantic segmentation.
-\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
-  Pattern Recognition}, pages 3431--3440.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 3431--3440, 2015.
 
-\bibitem[Luber et~al., 2011]{luber2011place}
-Luber, M., Diego~Tipaldi, G., and Arras, K.~O. (2011).
+\bibitem[Luber et~al.(2011)Luber, Diego~Tipaldi, and Arras]{luber2011place}
+Matthias Luber, Gian Diego~Tipaldi, and Kai~O Arras.
 \newblock Place-dependent people tracking.
-\newblock {\em The International Journal of Robotics Research}, 30(3):280--293.
+\newblock \emph{The International Journal of Robotics Research}, 30\penalty0
+  (3):\penalty0 280--293, 2011.
 
-\bibitem[Meier and Ade, 1999]{meier1999using}
-Meier, E.~B. and Ade, F. (1999).
+\bibitem[Meier and Ade(1999)]{meier1999using}
+Esther~B Meier and Frank Ade.
 \newblock Using the condensation algorithm to implement tracking for mobile
   robots.
-\newblock In {\em Advanced Mobile Robots, 1999.(Eurobot'99) 1999 Third European
-  Workshop on}, pages 73--80. IEEE.
+\newblock In \emph{Advanced Mobile Robots, 1999.(Eurobot'99) 1999 Third
+  European Workshop on}, pages 73--80. IEEE, 1999.
 
-\bibitem[Meyer-Delius et~al., 2012]{meyer2012occupancy}
-Meyer-Delius, D., Beinhofer, M., and Burgard, W. (2012).
+\bibitem[Meyer-Delius et~al.(2012)Meyer-Delius, Beinhofer, and
+  Burgard]{meyer2012occupancy}
+Daniel Meyer-Delius, Maximilian Beinhofer, and Wolfram Burgard.
 \newblock Occupancy grid models for robot mapping in changing environments.
-\newblock In {\em AAAI}.
+\newblock In \emph{AAAI}, 2012.
 
-\bibitem[Montemerlo et~al., 2002]{montemerlo2002conditional}
-Montemerlo, M., Thrun, S., and Whittaker, W. (2002).
+\bibitem[Montemerlo et~al.(2002)Montemerlo, Thrun, and
+  Whittaker]{montemerlo2002conditional}
+Michael Montemerlo, Sebastian Thrun, and William Whittaker.
 \newblock Conditional particle filters for simultaneous mobile robot
   localization and people-tracking.
-\newblock In {\em Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
-  International Conference on}, volume~1, pages 695--701. IEEE.
+\newblock In \emph{Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
+  International Conference on}, volume~1, pages 695--701. IEEE, 2002.
 
-\bibitem[Ross et~al., 2008]{ross2008incremental}
-Ross, D.~A., Lim, J., Lin, R.-S., and Yang, M.-H. (2008).
+\bibitem[Ondruska and Posner(2016)]{ondruska2016deep}
+Peter Ondruska and Ingmar Posner.
+\newblock Deep tracking: Seeing beyond seeing using recurrent neural networks.
+\newblock \emph{arXiv preprint arXiv:1602.00991}, 2016.
+
+\bibitem[Ondruska et~al.(2016)Ondruska, Dequaire, Wang, and
+  Posner]{ondruska2016end}
+Peter Ondruska, Julie Dequaire, Dominic~Zeng Wang, and Ingmar Posner.
+\newblock End-to-end tracking and semantic segmentation using recurrent neural
+  networks.
+\newblock \emph{arXiv preprint arXiv:1604.05091}, 2016.
+
+\bibitem[Ross et~al.(2008)Ross, Lim, Lin, and Yang]{ross2008incremental}
+David~A Ross, Jongwoo Lim, Ruei-Sung Lin, and Ming-Hsuan Yang.
 \newblock Incremental learning for robust visual tracking.
-\newblock {\em International Journal of Computer Vision}, 77(1):125--141.
+\newblock \emph{International Journal of Computer Vision}, 77\penalty0
+  (1):\penalty0 125--141, 2008.
 
-\bibitem[Russakovsky et~al., 2015]{russakovsky2015imagenet}
-Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z.,
-  Karpathy, A., Khosla, A., Bernstein, M., et~al. (2015).
+\bibitem[Ruder(2016)]{ruder2016overview}
+Sebastian Ruder.
+\newblock An overview of gradient descent optimization algorithms.
+\newblock \emph{arXiv preprint arXiv:1609.04747}, 2016.
+
+\bibitem[Russakovsky et~al.(2015)Russakovsky, Deng, Su, Krause, Satheesh, Ma,
+  Huang, Karpathy, Khosla, Bernstein, et~al.]{russakovsky2015imagenet}
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma,
+  Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, et~al.
 \newblock Imagenet large scale visual recognition challenge.
-\newblock {\em International Journal of Computer Vision}, 115(3):211--252.
+\newblock \emph{International Journal of Computer Vision}, 115\penalty0
+  (3):\penalty0 211--252, 2015.
 
-\bibitem[Schulz et~al., 2001]{schulz2001tracking}
-Schulz, D., Burgard, W., Fox, D., and Cremers, A.~B. (2001).
+\bibitem[Schulz et~al.(2001)Schulz, Burgard, Fox, and
+  Cremers]{schulz2001tracking}
+Dirk Schulz, Wolfram Burgard, Dieter Fox, and Armin~B Cremers.
 \newblock Tracking multiple moving targets with a mobile robot using particle
   filters and statistical data association.
-\newblock In {\em Robotics and Automation, 2001. Proceedings 2001 ICRA. IEEE
-  International Conference on}, volume~2, pages 1665--1670. IEEE.
+\newblock In \emph{Robotics and Automation, 2001. Proceedings 2001 ICRA. IEEE
+  International Conference on}, volume~2, pages 1665--1670. IEEE, 2001.
 
-\bibitem[Simonyan and Zisserman, 2014]{simonyan2014very}
-Simonyan, K. and Zisserman, A. (2014).
+\bibitem[Simonyan and Zisserman(2014{\natexlab{a}})]{Simonyan14c}
+K.~Simonyan and A.~Zisserman.
 \newblock Very deep convolutional networks for large-scale image recognition.
-\newblock {\em arXiv preprint arXiv:1409.1556}.
+\newblock \emph{CoRR}, abs/1409.1556, 2014{\natexlab{a}}.
 
-\bibitem[Wang et~al., 2015]{wang2015model}
-Wang, D.~Z., Posner, I., and Newman, P. (2015).
+\bibitem[Simonyan and Zisserman(2014{\natexlab{b}})]{simonyan2014very}
+Karen Simonyan and Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock \emph{arXiv preprint arXiv:1409.1556}, 2014{\natexlab{b}}.
+
+\bibitem[Tay et~al.(2008)Tay, Mekhnacha, Yguel, Coue, Pradalier, Laugier,
+  Fraichard, and Bessiere]{tay2008bayesian}
+MK~Tay, Kamel Mekhnacha, Manuel Yguel, Christophe Coue, C{\'e}dric Pradalier,
+  Christian Laugier, Th~Fraichard, and Pierre Bessiere.
+\newblock The bayesian occupation filter.
+\newblock In \emph{Probabilistic Reasoning and Decision Making in Sensory-Motor
+  Systems}, pages 77--98. Springer, 2008.
+
+\bibitem[Wang et~al.(2015)Wang, Posner, and Newman]{wang2015model}
+Dominic~Zeng Wang, Ingmar Posner, and Paul Newman.
 \newblock Model-free detection and tracking of dynamic objects with 2d lidar.
-\newblock {\em The International Journal of Robotics Research},
-  34(7):1039--1063.
+\newblock \emph{The International Journal of Robotics Research}, 34\penalty0
+  (7):\penalty0 1039--1063, 2015.
 
-\bibitem[Wang et~al., 2014]{wang2014modeling}
-Wang, Z., Ambrus, R., Jensfelt, P., and Folkesson, J. (2014).
+\bibitem[Wang et~al.(2014)Wang, Ambrus, Jensfelt, and
+  Folkesson]{wang2014modeling}
+Zhan Wang, Rares Ambrus, Patric Jensfelt, and John Folkesson.
 \newblock Modeling motion patterns of dynamic objects by iohmm.
-\newblock In {\em Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ
-  International Conference on}, pages 1832--1838. IEEE.
+\newblock In \emph{Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ
+  International Conference on}, pages 1832--1838. IEEE, 2014.
 
 \end{thebibliography}

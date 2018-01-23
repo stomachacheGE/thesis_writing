@@ -50,7 +50,7 @@ To acquire enough amount of data for trainning our netwrok is expensive, especia
 \begin{tabular}{ll}
 \includegraphics[width=0.48\textwidth]{figures/trajs_through_cell.png}
 &
-\includegraphics[width=0.48\textwidth]{figures/trajs_through_cell.png}
+\includegraphics[width=0.48\textwidth]{figures/probs_on_that_cell.png}
 \end{tabular}
 \caption{\textbf{Left}: One example map crop as netwrok input. The map has size of \( 32 \times 32 \) cells, with resolution of \( 0.2m/cell\). It also shows trajectories that goes through the red cell. \textbf{Right}: Visualization of conditional probability \( P\{V | V^-\} \) for the red cell on left map. The axis shows velocities on \( x, y\) directions. Outter axes represent last velocity \( V^- \), and inner represent next velocity \( V \). One can see that \( P\{V=(-1, -1) | V^-=(-1, -1)\} = 0.21 \) and \( P\{V=(0, -1) | V^-=(-1, -1)\} = 0.79 \). This indicates that if a person reaches the red cell from upper right, it is very likely he will go downwards. }. 
 \label{fig:trajs}
@@ -107,8 +107,8 @@ The possible metrics that could be used for measuring the consistency between oc
    \( \Omega \) & \( [0.01, 0.2] \) & \( [0.01, 0.2] \)\\
    \hline
  \end{tabular}
-\label{table:param_range}
 \caption{Parameter ranges for BOF filters.}
+\label{table:param_range}
 \end{table}
 
 \subsection{On simulated data}

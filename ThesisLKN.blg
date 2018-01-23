@@ -13,51 +13,52 @@ A level-1 auxiliary file: chap6.aux
 A level-1 auxiliary file: chap7.aux
 A level-1 auxiliary file: Appendix.aux
 A level-1 auxiliary file: Abbreviations.aux
-The style file: apalike.bst
+The style file: plainnat.bst
 Database file #1: Bibliography.bib
 Repeated entry---line 139 of file Bibliography.bib
  : @article{gauvrit1997formulation
  :                                ,
 I'm skipping whatever remains of this entry
-You've used 32 entries,
-            1935 wiz_defined-function locations,
-            668 strings with 10901 characters,
-and the built_in function-call counts, 16981 in all, are:
-= -- 1745
-> -- 700
-< -- 28
-+ -- 248
-- -- 242
-* -- 1345
-:= -- 2668
-add.period$ -- 110
-call.type$ -- 32
-change.case$ -- 280
-chr.to.int$ -- 32
-cite$ -- 32
-duplicate$ -- 727
-empty$ -- 1172
-format.name$ -- 282
-if$ -- 3561
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 32
-newline$ -- 163
-num.names$ -- 96
-pop$ -- 317
+Warning--empty journal in de2017dynamic
+You've used 44 entries,
+            2773 wiz_defined-function locations,
+            846 strings with 14174 characters,
+and the built_in function-call counts, 25938 in all, are:
+= -- 2400
+> -- 1529
+< -- 40
++ -- 513
+- -- 468
+* -- 2040
+:= -- 3730
+add.period$ -- 149
+call.type$ -- 44
+change.case$ -- 286
+chr.to.int$ -- 43
+cite$ -- 89
+duplicate$ -- 1226
+empty$ -- 2029
+format.name$ -- 530
+if$ -- 5674
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 45
+newline$ -- 228
+num.names$ -- 176
+pop$ -- 630
 preamble$ -- 1
-purify$ -- 280
+purify$ -- 243
 quote$ -- 0
-skip$ -- 592
+skip$ -- 1031
 stack$ -- 0
-substring$ -- 1271
-swap$ -- 243
-text.length$ -- 23
+substring$ -- 1152
+swap$ -- 322
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 192
-warning$ -- 0
-while$ -- 134
+type$ -- 479
+warning$ -- 1
+while$ -- 219
 width$ -- 0
-write$ -- 432
+write$ -- 590
 (There was 1 error message)

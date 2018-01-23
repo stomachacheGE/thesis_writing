@@ -7,37 +7,40 @@
 \contentsline {subsection}{\numberline {2.2.1}Human Motion Modeling}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Dynamic Environment Modeling}{11}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Neural Networks}{13}{section.2.3}
-\contentsline {chapter}{\numberline {3}Background Knowledge}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Bayesian Occupancy Filter (BOF)}{15}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Bayesian Filtering}{15}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Bayesian Occupancy Filter Formulation}{15}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}BOF with Map Knowledge and Motion Model}{15}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Fully Convolutional Neural Network}{15}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Densely Connected Convolutional Networks (DenseNets)}{15}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Fully Convolutional DenseNets}{15}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Metrics}{15}{section.3.3}
-\contentsline {chapter}{\numberline {4}Implementation Details}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Human Trajectory Simulation}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Architecture of Neural Network}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Implementation of BOFUM}{17}{section.4.3}
-\contentsline {section}{\numberline {4.4}Hyperparameter Tuning}{17}{section.4.4}
-\contentsline {chapter}{\numberline {5}Results}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview of Datasets}{19}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Simulated Dataset}{19}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Real Dataset}{19}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Evaluation of Tracking Performance}{19}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Tracking on Simulated Data}{19}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Tracking on Real Data}{19}{subsection.5.2.2}
-\contentsline {chapter}{\numberline {6}Outlooks}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}End to End Training}{21}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{21}{section.6.2}
-\contentsline {chapter}{\numberline {7}Summary of Results}{23}{chapter.7}
-\contentsline {section}{\numberline {7.1} Neural Network Training}{23}{section.7.1}
-\contentsline {section}{\numberline {7.2}Human Trajectory Simulation}{25}{section.7.2}
-\contentsline {section}{\numberline {7.3}Object Tracking using Bayesian Occupancy Filter}{26}{section.7.3}
-\contentsline {section}{\numberline {7.4}Comparision between BOFUM and BOFMP}{27}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}On simulated data}{28}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}On real data}{30}{subsection.7.4.2}
-\contentsline {chapter}{\numberline {A}}{35}{appendix.A}
-\contentsline {chapter}{\numberline {B}Notation und Abk\IeC {\"u}rzungen}{37}{appendix.B}
-\contentsline {chapter}{Bibliography}{39}{appendix*.26}
+\contentsline {chapter}{\numberline {3}Background Knowledge}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bayesian Occupancy Filter}{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Bayesian Filtering}{17}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}BOFUM Formulation}{18}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}BOF with Motion Pattern (BOFMP)}{23}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Convolutional Neural Network}{26}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Densely Connected Convolutional Networks }{27}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Fully Convolutional DenseNet}{28}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Implementation Details}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Human Trajectory Simulation}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Architecture of Neural Network}{33}{section.4.2}
+\contentsline {section}{\numberline {4.3}Implementation of BOFMP}{36}{section.4.3}
+\contentsline {section}{\numberline {4.4}Data Preprocessing}{36}{section.4.4}
+\contentsline {section}{\numberline {4.5}Hyperparameter Tuning}{36}{section.4.5}
+\contentsline {chapter}{\numberline {5}Results and Discussions}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Metrics}{37}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Metrics for Neural Network}{37}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Metrics for Tracking}{37}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Training of Neural Network}{37}{section.5.2}
+\contentsline {section}{\numberline {5.3}Evaluation of Tracking Performance}{38}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Overview of Datasets}{38}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Tracking on Simulated Data}{39}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Tracking on Real Data}{39}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Applications}{39}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusions and Outlooks}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}End to End Training}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{41}{section.6.2}
+\contentsline {chapter}{\numberline {7}Summary of Results}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1} Neural Network Training}{43}{section.7.1}
+\contentsline {section}{\numberline {7.2}Human Trajectory Simulation}{45}{section.7.2}
+\contentsline {section}{\numberline {7.3}Object Tracking using Bayesian Occupancy Filter}{46}{section.7.3}
+\contentsline {section}{\numberline {7.4}Comparision between BOFUM and BOFMP}{47}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}On simulated data}{48}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}On real data}{50}{subsection.7.4.2}
+\contentsline {chapter}{\numberline {A}}{55}{appendix.A}
+\contentsline {chapter}{\numberline {B}Notation und Abk\IeC {\"u}rzungen}{57}{appendix.B}
+\contentsline {chapter}{Bibliography}{59}{appendix*.38}
