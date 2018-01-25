@@ -10,7 +10,6 @@ A level-1 auxiliary file: chap3.aux
 A level-1 auxiliary file: chap4.aux
 A level-1 auxiliary file: chap5.aux
 A level-1 auxiliary file: chap6.aux
-A level-1 auxiliary file: chap7.aux
 A level-1 auxiliary file: Appendix.aux
 A level-1 auxiliary file: Abbreviations.aux
 The style file: plainnat.bst
@@ -20,45 +19,45 @@ Repeated entry---line 139 of file Bibliography.bib
  :                                ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in de2017dynamic
-You've used 44 entries,
+You've used 45 entries,
             2773 wiz_defined-function locations,
-            846 strings with 14174 characters,
-and the built_in function-call counts, 25938 in all, are:
-= -- 2400
-> -- 1529
-< -- 40
-+ -- 513
-- -- 468
-* -- 2040
-:= -- 3730
-add.period$ -- 149
-call.type$ -- 44
-change.case$ -- 286
-chr.to.int$ -- 43
-cite$ -- 89
-duplicate$ -- 1226
-empty$ -- 2029
-format.name$ -- 530
-if$ -- 5674
+            850 strings with 14283 characters,
+and the built_in function-call counts, 26301 in all, are:
+= -- 2432
+> -- 1550
+< -- 41
++ -- 520
+- -- 474
+* -- 2063
+:= -- 3788
+add.period$ -- 152
+call.type$ -- 45
+change.case$ -- 291
+chr.to.int$ -- 44
+cite$ -- 91
+duplicate$ -- 1245
+empty$ -- 2059
+format.name$ -- 539
+if$ -- 5750
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 45
-newline$ -- 228
-num.names$ -- 176
-pop$ -- 630
+missing$ -- 46
+newline$ -- 233
+num.names$ -- 180
+pop$ -- 640
 preamble$ -- 1
-purify$ -- 243
+purify$ -- 247
 quote$ -- 0
-skip$ -- 1031
+skip$ -- 1047
 stack$ -- 0
-substring$ -- 1152
-swap$ -- 322
+substring$ -- 1154
+swap$ -- 323
 text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 479
+type$ -- 490
 warning$ -- 1
-while$ -- 219
+while$ -- 222
 width$ -- 0
-write$ -- 590
+write$ -- 602
 (There was 1 error message)

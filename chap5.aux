@@ -1,25 +1,62 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Results and Discussions}{37}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Results and Discussions}{45}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:5}{{5}{37}{Results and Discussions}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Metrics}{37}{section.5.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Metrics for Neural Network}{37}{subsection.5.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Metrics for Tracking}{37}{subsection.5.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Training of Neural Network}{37}{section.5.2}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Number of samples in training, validation and test set.\relax }}{38}{table.caption.20}}
-\newlabel{table:nos}{{5.1}{38}{Number of samples in training, validation and test set.\relax }{table.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces one example of map window as network input and its ground truth}}{38}{figure.caption.21}}
-\newlabel{fig:trajs}{{5.1}{38}{one example of map window as network input and its ground truth}{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Evaluation of Tracking Performance}{38}{section.5.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Overview of Datasets}{38}{subsection.5.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Tracking on Simulated Data}{39}{subsection.5.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Tracking on Real Data}{39}{subsection.5.3.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Applications}{39}{section.5.4}}
+\newlabel{chapter:5}{{5}{45}{Results and Discussions}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Metrics}{45}{section.5.1}}
+\newlabel{sec:metrics}{{5.1}{45}{Metrics}{section.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Metrics for Neural Network}{45}{subsection.5.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Metrics for Tracking}{45}{subsection.5.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Training of Neural Network}{45}{section.5.2}}
+\citation{Kingma2014Adam}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Number of samples in training, validation and test set.\relax }}{46}{table.caption.26}}
+\newlabel{table:nos}{{5.1}{46}{Number of samples in training, validation and test set.\relax }{table.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces one example of map window as network input and its ground truth}}{46}{figure.caption.27}}
+\newlabel{fig:trajs}{{5.1}{46}{one example of map window as network input and its ground truth}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Cross entropy loss during training. The networks are trained to learn conditional probabilities \( P_c(V^{ex} | V^{en}) \). The blue line shows training dynamics using data generated with 4 directions "left, right, up and down". The yellow line also takes diagonal directions into account, which has 8 directions in total. \relax }}{47}{figure.caption.28}}
+\newlabel{fig:trainning}{{5.2}{47}{Cross entropy loss during training. The networks are trained to learn conditional probabilities \( P_c(V^{ex} | V^{en}) \). The blue line shows training dynamics using data generated with 4 directions "left, right, up and down". The yellow line also takes diagonal directions into account, which has 8 directions in total. \relax }{figure.caption.28}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Cross entropy loss on test data.\relax }}{47}{table.caption.29}}
+\newlabel{table:loss_on_test}{{5.2}{47}{Cross entropy loss on test data.\relax }{table.caption.29}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Evaluation of Tracking Performance}{48}{section.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Overview of Datasets}{48}{subsection.5.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Tracking on Simulated Data}{48}{subsection.5.3.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Value ranges of filter parameters for simulated data.\relax }}{49}{table.caption.30}}
+\newlabel{table:param_range_simulated}{{5.3}{49}{Value ranges of filter parameters for simulated data.\relax }{table.caption.30}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Best parameters for BOFUM and BOFMP on simulated data.\relax }}{49}{table.caption.31}}
+\newlabel{table:best_param_simulated}{{5.4}{49}{Best parameters for BOFUM and BOFMP on simulated data.\relax }{table.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Evaluation results on simulated test data.}}{50}{figure.caption.32}}
+\newlabel{fig:simulated_test_data}{{5.3}{50}{Evaluation results on simulated test data}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces One example of tracking case from test data. A person is walking from the lower door to the door in the upper right corner. The measurement is lost at $t=9$. For BOFUM, it predicts most occupancies going upwards. For our BOFMP, since it has knowledge on the human motion model, it predicts occupancies to all possible directions, such as going to the door in the upper right corner, the door on the left and empty space on the right.\relax }}{51}{figure.caption.33}}
+\newlabel{fig:tracking_simulated_data}{{5.4}{51}{One example of tracking case from test data. A person is walking from the lower door to the door in the upper right corner. The measurement is lost at $t=9$. For BOFUM, it predicts most occupancies going upwards. For our BOFMP, since it has knowledge on the human motion model, it predicts occupancies to all possible directions, such as going to the door in the upper right corner, the door on the left and empty space on the right.\relax }{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}On real data}{51}{subsection.5.3.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Value ranges for filter parameters on real data.\relax }}{51}{table.caption.34}}
+\newlabel{table:param_range_real}{{5.5}{51}{Value ranges for filter parameters on real data.\relax }{table.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A turn on simulated human trajectory. In order to reach the goal location in upper left corner, the simulated trajectory shows that a person will make a turn from going up to going up-left at location indicated by the red square. However, in real scenarios, a person is more flexible in deciding where to make that turn and he might turn at any location in the green area.\relax }}{52}{figure.caption.35}}
+\newlabel{fig:blur_idea}{{5.5}{52}{A turn on simulated human trajectory. In order to reach the goal location in upper left corner, the simulated trajectory shows that a person will make a turn from going up to going up-left at location indicated by the red square. However, in real scenarios, a person is more flexible in deciding where to make that turn and he might turn at any location in the green area.\relax }{figure.caption.35}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Parameters introduced by spatial blurring and their value ranges.\relax }}{53}{table.caption.36}}
+\newlabel{table:spatial_blur_param_range}{{5.6}{53}{Parameters introduced by spatial blurring and their value ranges.\relax }{table.caption.36}{}}
+\newlabel{table:motion_keeping_param_range}{{\caption@xref {table:motion_keeping_param_range}{ on input line 229}}{54}{On real data}{table.caption.37}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces Parameters introduced by motion keeping and their value ranges.\relax }}{54}{table.caption.37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \textbf  {Up}: Three tracking steps of BOFMP with motion keeping. A person is walking from upper left towards lower right. The measurement is lost at $t=9$. \textbf  {Down}: Velocities of the cell pointed by the red arrow at $t=8$. On each plot, the most possible direction is shown by the green arrows. Based on measurements from $t=7$ and $t=8$, the predicted velocity $P\{V_{pred}\}$ shows it is more likely the occupancy will propagates towards right for the next time step. However, past motion trend, which is represented by $P\{V_{ma}\}$, shows it is more likely to move to lower right. As a consequnce, BOFMP with motion keeping shows there are possibilities going both right and lower right, which is more realistic in this tracking example.\relax }}{54}{figure.caption.38}}
+\newlabel{fig:keep_motion_idea}{{5.6}{54}{\textbf {Up}: Three tracking steps of BOFMP with motion keeping. A person is walking from upper left towards lower right. The measurement is lost at $t=9$. \textbf {Down}: Velocities of the cell pointed by the red arrow at $t=8$. On each plot, the most possible direction is shown by the green arrows. Based on measurements from $t=7$ and $t=8$, the predicted velocity $P\{V_{pred}\}$ shows it is more likely the occupancy will propagates towards right for the next time step. However, past motion trend, which is represented by $P\{V_{ma}\}$, shows it is more likely to move to lower right. As a consequnce, BOFMP with motion keeping shows there are possibilities going both right and lower right, which is more realistic in this tracking example.\relax }{figure.caption.38}{}}
+\newlabel{table:best_param_real}{{\caption@xref {table:best_param_real}{ on input line 256}}{55}{On real data}{table.caption.39}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces Best parameters for BOFUM and BOFMP on real data.\relax }}{55}{table.caption.39}}
+\newlabel{table:real_test_data}{{\caption@xref {table:real_test_data}{ on input line 275}}{55}{On real data}{table.caption.40}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces Future predictions for BOFUM and BOFMP on real data.\relax }}{55}{table.caption.40}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Applications}{55}{section.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Future Occupancy Prediction}{55}{subsection.5.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Dynamic Analysis}{55}{subsection.5.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Get occupancy map}{55}{subsection.5.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Evaluation results on real test data. Like for simulated data, average precision starts with values close to zero, and increase rapidly over the next two time steps. From $t=3$ to $t=8$, average precisions keep rather stable at high values, which proves that filters predict very well for the next immediate step. In future prediction stage ($t=9:16$), average precisions decrease severely as time horizon increases, since the state of the world becomes more uncertain. However, our BOFMP and its variations are still better than BOFUM for every time step in this stage.\relax }}{56}{figure.caption.41}}
+\newlabel{fig:real_test_data}{{5.7}{56}{Evaluation results on real test data. Like for simulated data, average precision starts with values close to zero, and increase rapidly over the next two time steps. From $t=3$ to $t=8$, average precisions keep rather stable at high values, which proves that filters predict very well for the next immediate step. In future prediction stage ($t=9:16$), average precisions decrease severely as time horizon increases, since the state of the world becomes more uncertain. However, our BOFMP and its variations are still better than BOFUM for every time step in this stage.\relax }{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Occupancy predictions for BOFUM and our proposed BOFMP after several time steps. The map shows a T-section. At $t=0$, a person is shown as a red rectangle and with initial velocity towards left. At $t=15$, the person encounters intersection. BOFUM has no information about human motion pattern, and continues to propagate occupancy towards left. Our BOFMP knows that humans are likely to turn to either upper or lower corridors. At $t=30$, since occupancies going left vanish due to the wall, BOFUM predicts occupancies in corridors, but they are biased towards walls on the left. Our BOFMP predicts more occupancies in the middle of corridors, since it knows humans are more likely to walk in the middle.\relax }}{57}{figure.caption.42}}
+\newlabel{fig:idea}{{5.8}{57}{Occupancy predictions for BOFUM and our proposed BOFMP after several time steps. The map shows a T-section. At $t=0$, a person is shown as a red rectangle and with initial velocity towards left. At $t=15$, the person encounters intersection. BOFUM has no information about human motion pattern, and continues to propagate occupancy towards left. Our BOFMP knows that humans are likely to turn to either upper or lower corridors. At $t=30$, since occupancies going left vanish due to the wall, BOFUM predicts occupancies in corridors, but they are biased towards walls on the left. Our BOFMP predicts more occupancies in the middle of corridors, since it knows humans are more likely to walk in the middle.\relax }{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Average occupancy prediction on static map}}{58}{figure.caption.43}}
+\newlabel{fig:average_occupancy_pred}{{5.9}{58}{Average occupancy prediction on static map}{figure.caption.43}{}}
 \@setckpt{chap5}{
-\setcounter{page}{40}
-\setcounter{equation}{0}
+\setcounter{page}{59}
+\setcounter{equation}{3}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -29,12 +66,12 @@
 \setcounter{part}{0}
 \setcounter{chapter}{5}
 \setcounter{section}{4}
-\setcounter{subsection}{0}
+\setcounter{subsection}{3}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{1}
-\setcounter{table}{1}
+\setcounter{figure}{9}
+\setcounter{table}{9}
 \setcounter{StandardModuleDepth}{0}
 \setcounter{float@type}{8}
 \setcounter{ContinuedFloat}{0}
@@ -48,9 +85,9 @@
 \setcounter{ALG@blocknr}{10}
 \setcounter{ALG@storecount}{0}
 \setcounter{ALG@tmpcounter}{0}
-\setcounter{Item}{15}
+\setcounter{Item}{30}
 \setcounter{Hfootnote}{2}
-\setcounter{bookmark@seq@number}{35}
-\setcounter{section@level}{1}
+\setcounter{bookmark@seq@number}{40}
+\setcounter{section@level}{2}
 \setcounter{pageno}{2}
 }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.22)  22 JAN 2018 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.22)  25 JAN 2018 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -895,15 +895,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip66
 )
 (./ThesisLKN.aux (./Abstract.aux) (./statement.aux) (./foreword.aux)
-(./chap1.aux) (./chap2.aux) (./chap3.aux) (./chap4.aux) (./chap5.aux)
-(./chap6.aux) (./chap7.aux
+(./chap1.aux) (./chap2.aux) (./chap3.aux
+
+LaTeX Warning: Label `eq:adding_noise' multiply defined.
+
+) (./chap4.aux) (./chap5.aux
 
 LaTeX Warning: Label `fig:idea' multiply defined.
 
-
-LaTeX Warning: Label `fig:trajs' multiply defined.
-
-) (./Appendix.aux) (./Abbreviations.aux))
+) (./chap6.aux) (./Appendix.aux) (./Abbreviations.aux))
 \openout1 = `ThesisLKN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
@@ -976,7 +976,7 @@ ed-to.pdf LKN_Logo_klein.eps>
 (epstopdf)             \includegraphics on input line 121.
 Package epstopdf Info: Output file is already uptodate.
 
-<LKN_Logo_klein-eps-converted-to.pdf, id=196, 460.72125pt x 418.56375pt>
+<LKN_Logo_klein-eps-converted-to.pdf, id=188, 460.72125pt x 418.56375pt>
 File: LKN_Logo_klein-eps-converted-to.pdf Graphic file (type pdf)
 
 <use LKN_Logo_klein-eps-converted-to.pdf>
@@ -1052,58 +1052,60 @@ Chapter 1.
 
 
 
-] <figures/roundabout.png, id=309, 434.37282pt x 394.47375pt>
+] <figures/roundabout.png, id=299, 434.37282pt x 394.47375pt>
 File: figures/roundabout.png Graphic file (type png)
 
 <use figures/roundabout.png>
 Package pdftex.def Info: figures/roundabout.png used on input line 14.
 (pdftex.def)             Requested size: 230.36061pt x 209.2025pt.
  [2 <./figures/roundabout.png>] [3]
-File: figures/roundabout.png Graphic file (type png)
+<figures/theme_plot_1.png, id=330, 332.3003pt x 281.28618pt>
+File: figures/theme_plot_1.png Graphic file (type png)
 
-<use figures/roundabout.png>
-Package pdftex.def Info: figures/roundabout.png used on input line 29.
-(pdftex.def)             Requested size: 230.36061pt x 209.2025pt.
- [4]) [5] [6
+<use figures/theme_plot_1.png>
+Package pdftex.def Info: figures/theme_plot_1.png used on input line 29.
+(pdftex.def)             Requested size: 276.43555pt x 234.00826pt.
+ [4 <./figures/theme_plot_1.png>]) [5] [6
 
 
 ]
 \openout2 = `chap2.aux'.
 
- (./chap2.tex
+
+(./chap2.tex
 Chapter 2.
 [7
 
 
-] [8] <figures/affordance_map.png, id=394, 1076.02pt x 317.185pt>
+] [8] <figures/affordance_map.png, id=386, 1076.02pt x 317.185pt>
 File: figures/affordance_map.png Graphic file (type png)
 
 <use figures/affordance_map.png>
 Package pdftex.def Info: figures/affordance_map.png used on input line 20.
 (pdftex.def)             Requested size: 460.72124pt x 135.81093pt.
  [9 <./figures/affordance_map.png>] [10]
-<figures/condi_tran_map.png, id=419, 543.02875pt x 349.305pt>
+<figures/condi_tran_map.png, id=411, 543.02875pt x 349.305pt>
 File: figures/condi_tran_map.png Graphic file (type png)
 
 <use figures/condi_tran_map.png>
 Package pdftex.def Info: figures/condi_tran_map.png used on input line 39.
 (pdftex.def)             Requested size: 276.43555pt x 177.82338pt.
  [11 <./figures/condi_tran_map.png>]
-<figures/IOHMM.png, id=436, 556.0775pt x 340.27126pt>
+<figures/IOHMM.png, id=428, 556.0775pt x 340.27126pt>
 File: figures/IOHMM.png Graphic file (type png)
  <use figures/IOHMM.png>
 Package pdftex.def Info: figures/IOHMM.png used on input line 56.
 (pdftex.def)             Requested size: 276.43555pt x 169.15388pt.
 
 [12 <./figures/IOHMM.png>]
-<figures/denseNet.png, id=452, 464.73625pt x 338.26375pt>
+<figures/denseNet.png, id=444, 464.73625pt x 338.26375pt>
 File: figures/denseNet.png Graphic file (type png)
 
 <use figures/denseNet.png>
 Package pdftex.def Info: figures/denseNet.png used on input line 70.
 (pdftex.def)             Requested size: 276.43555pt x 201.21005pt.
  [13 <./figures/denseNet.png>]
-<figures/rnn_and_bayes.png, id=473, 646.415pt x 249.93375pt>
+<figures/rnn_and_bayes.png, id=465, 646.415pt x 249.93375pt>
 File: figures/rnn_and_bayes.png Graphic file (type png)
 
 <use figures/rnn_and_bayes.png>
@@ -1118,14 +1120,11 @@ Package pdftex.def Info: figures/rnn_and_bayes.png used on input line 83.
 
  (./chap3.tex
 Chapter 3.
-
-LaTeX Warning: Reference `sec:metrics' on page 17 undefined on input line 4.
-
 [17
 
 
 ] [18] [19] [20]
-<figures/bof_recursive.png, id=558, 467.7475pt x 218.8175pt>
+<figures/bof_recursive.png, id=551, 467.7475pt x 218.8175pt>
 File: figures/bof_recursive.png Graphic file (type png)
 
 <use figures/bof_recursive.png>
@@ -1141,21 +1140,21 @@ Underfull \vbox (badness 6944) has occurred while \output is active []
 
  [21]
 [22 <./figures/bof_recursive.png>] [23]
-<figures/bofmp_example.png, id=610, 499.51323pt x 222.47824pt>
+<figures/bofmp_example.png, id=603, 499.51323pt x 222.47824pt>
 File: figures/bofmp_example.png Graphic file (type png)
 
 <use figures/bofmp_example.png>
 Package pdftex.def Info: figures/bofmp_example.png used on input line 219.
 (pdftex.def)             Requested size: 391.61586pt x 174.42513pt.
  [24] [25 <./figures/bofmp_example.png>]
-[26] [27] <figures/res_idea.png, id=663, 434.62375pt x 237.88875pt>
+[26] [27] <figures/res_idea.png, id=657, 434.62375pt x 237.88875pt>
 File: figures/res_idea.png Graphic file (type png)
 
 <use figures/res_idea.png>
 Package pdftex.def Info: figures/res_idea.png used on input line 270.
 (pdftex.def)             Requested size: 253.39807pt x 138.6979pt.
  [28 <./figures/res_idea.png>]
-<figures/sampling.png, id=678, 403.15323pt x 123.28412pt>
+<figures/sampling.png, id=672, 403.15323pt x 123.28412pt>
 File: figures/sampling.png Graphic file (type png)
 
 <use figures/sampling.png>
@@ -1169,13 +1168,17 @@ Package pdftex.def Info: figures/sampling.png used on input line 294.
 
  (./chap4.tex
 Chapter 4.
-<figures/map1.png, id=696, 151.767pt x 79.497pt>
+
+LaTeX Warning: Reference `sec:hyperparameter' on page 31 undefined on input lin
+e 5.
+
+<figures/map1.png, id=689, 151.767pt x 79.497pt>
 File: figures/map1.png Graphic file (type png)
  <use figures/map1.png>
 Package pdftex.def Info: figures/map1.png used on input line 15.
 (pdftex.def)             Requested size: 368.61807pt x 138.23872pt.
 
-<figures/map2.png, id=697, 228.855pt x 92.345pt>
+<figures/map2.png, id=690, 228.855pt x 92.345pt>
 File: figures/map2.png Graphic file (type png)
  <use figures/map2.png>
 Package pdftex.def Info: figures/map2.png used on input line 16.
@@ -1188,7 +1191,7 @@ Package pdftex.def Info: figures/map2.png used on input line 16.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 43.
  [33] [34]
-<figures/tiramisu.png, id=726, 335.2525pt x 480.79625pt>
+<figures/tiramisu.png, id=719, 335.2525pt x 480.79625pt>
 File: figures/tiramisu.png Graphic file (type png)
 
 <use figures/tiramisu.png>
@@ -1199,263 +1202,299 @@ Underfull \hbox (badness 10000) in alignment at lines 128--128
 [][] 
  []
 
+[36] <figures/before.png, id=743, 867.24pt x 252.945pt>
+File: figures/before.png Graphic file (type png)
 
-Overfull \hbox (2.34715pt too wide) in alignment at lines 147--147
+<use figures/before.png>
+Package pdftex.def Info: figures/before.png used on input line 168.
+(pdftex.def)             Requested size: 460.72124pt x 134.3767pt.
+ <figures/after.png, id=744, 867.24pt x 252.945pt>
+File: figures/after.png Graphic file (type png)
+
+<use figures/after.png>
+Package pdftex.def Info: figures/after.png used on input line 169.
+(pdftex.def)             Requested size: 460.72124pt x 134.3767pt.
+
+<figures/application_1.png, id=745, 1279.78125pt x 712.6625pt>
+File: figures/application_1.png Graphic file (type png)
+
+<use figures/application_1.png>
+Package pdftex.def Info: figures/application_1.png used on input line 176.
+(pdftex.def)             Requested size: 414.6463pt x 230.90573pt.
+ [37]
+Overfull \vbox (51.65915pt too high) has occurred while \output is active []
+
+
+[38 <./figures/before.png> <./figures/after.png> <./figures/application_1.png>]
+<figures/mm_ext_1.png, id=766, 361.35pt x 361.35pt>
+File: figures/mm_ext_1.png Graphic file (type png)
+ <use figures/mm_ext_1.png>
+Package pdftex.def Info: figures/mm_ext_1.png used on input line 212.
+(pdftex.def)             Requested size: 230.36061pt x 230.35895pt.
+
+<figures/mm_ext_2.png, id=767, 361.35pt x 361.35pt>
+File: figures/mm_ext_2.png Graphic file (type png)
+ <use figures/mm_ext_2.png>
+Package pdftex.def Info: figures/mm_ext_2.png used on input line 214.
+(pdftex.def)             Requested size: 230.36061pt x 230.35895pt.
+
+<figures/mm_ext_3.png, id=768, 361.35pt x 361.35pt>
+File: figures/mm_ext_3.png Graphic file (type png)
+ <use figures/mm_ext_3.png>
+Package pdftex.def Info: figures/mm_ext_3.png used on input line 215.
+(pdftex.def)             Requested size: 230.36061pt x 230.35895pt.
+
+<figures/mm_ext_4.png, id=769, 361.35pt x 361.35pt>
+File: figures/mm_ext_4.png Graphic file (type png)
+ <use figures/mm_ext_4.png>
+Package pdftex.def Info: figures/mm_ext_4.png used on input line 217.
+(pdftex.def)             Requested size: 230.36061pt x 230.35895pt.
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 211--219
 [][] 
  []
 
-) [36]
+[39] [40 <./figures/mm_ext_1.png> <./figures/mm_ext_2.png> <./figures/mm_ext_3.
+png> <./figures/mm_ext_4.png>]
+<figures/filtering_workflow.png, id=798, 488.17676pt x 340.80264pt>
+File: figures/filtering_workflow.png Graphic file (type png)
+
+<use figures/filtering_workflow.png>
+Package pdftex.def Info: figures/filtering_workflow.png used on input line 243.
+
+(pdftex.def)             Requested size: 322.50345pt x 225.14883pt.
+
+Underfull \vbox (badness 2401) has occurred while \output is active []
+
+ [41]
+<figures/correction_step.png, id=810, 867.24pt x 252.945pt>
+File: figures/correction_step.png Graphic file (type png)
+
+<use figures/correction_step.png>
+Package pdftex.def Info: figures/correction_step.png used on input line 250.
+(pdftex.def)             Requested size: 460.72124pt x 134.3767pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42 <./figures/filtering_workflow.png> <./figures/correction_step.png>]
+<figures/classes.png, id=819, 585.2453pt x 479.67441pt>
+File: figures/classes.png Graphic file (type png)
+
+<use figures/classes.png>
+Package pdftex.def Info: figures/classes.png used on input line 268.
+(pdftex.def)             Requested size: 460.72124pt x 377.62848pt.
+) [43] [44 <./figures/classes.png>]
 \openout2 = `chap5.aux'.
 
  (./chap5.tex
 Chapter 5.
-<figures/trajs_through_cell.png, id=752, 578.16pt x 578.16pt>
+[45
+
+
+
+
+] <figures/trajs_through_cell.png, id=846, 578.16pt x 578.16pt>
 File: figures/trajs_through_cell.png Graphic file (type png)
 
 <use figures/trajs_through_cell.png>
-Package pdftex.def Info: figures/trajs_through_cell.png used on input line 31.
+Package pdftex.def Info: figures/trajs_through_cell.png used on input line 33.
 (pdftex.def)             Requested size: 221.14421pt x 221.14107pt.
 
-<figures/probs_on_that_cell_2.png, id=753, 359.93294pt x 359.93294pt>
+<figures/probs_on_that_cell_2.png, id=847, 359.93294pt x 359.93294pt>
 File: figures/probs_on_that_cell_2.png Graphic file (type png)
 
 <use figures/probs_on_that_cell_2.png>
-Package pdftex.def Info: figures/probs_on_that_cell_2.png used on input line 33
+Package pdftex.def Info: figures/probs_on_that_cell_2.png used on input line 35
 .
 (pdftex.def)             Requested size: 221.14421pt x 221.146pt.
 
-Overfull \hbox (5.56721pt too wide) in paragraph at lines 30--35
+Overfull \hbox (5.56721pt too wide) in paragraph at lines 32--37
 [][] 
  []
 
-[37
+<figures/training_hist.png, id=848, 505.89pt x 361.35pt>
+File: figures/training_hist.png Graphic file (type png)
 
-
-
-
-]
+<use figures/training_hist.png>
+Package pdftex.def Info: figures/training_hist.png used on input line 43.
+(pdftex.def)             Requested size: 322.50345pt x 230.36447pt.
+ [46 <./figures/trajs_through_cell.png> <./figures/probs_on_that_cell_2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./figures/trajs_through_cell.png> <./figures/probs_on_that_cell_2.png>]) 
-[39]
-[40
-
-
-]
-\openout2 = `chap6.aux'.
-
- (./chap6.tex
-Chapter 6.
-) [41
-
-
-] [42
-
-
-]
-\openout2 = `chap7.aux'.
-
- (./chap7.tex
-Chapter 7.
-<figures/idea.png, id=785, 867.24pt x 505.89pt>
-File: figures/idea.png Graphic file (type png)
- <use figures/idea.png>
-Package pdftex.def Info: figures/idea.png used on input line 8.
-(pdftex.def)             Requested size: 460.72124pt x 268.75339pt.
- [43
-
-
-]
-<figures/trainning_history.png, id=796, 505.89pt x 361.35pt>
-File: figures/trainning_history.png Graphic file (type png)
-
-<use figures/trainning_history.png>
-Package pdftex.def Info: figures/trainning_history.png used on input line 36.
-(pdftex.def)             Requested size: 322.50345pt x 230.36447pt.
- [44 <./figures/idea.png>] [45 <./figures/trainning_history.png>]
-File: figures/trajs_through_cell.png Graphic file (type png)
- <use figures/trajs_through_cell.png>
-Package pdftex.def Info: figures/trajs_through_cell.png used on input line 51.
-(pdftex.def)             Requested size: 221.14421pt x 221.14107pt.
-
-<figures/probs_on_that_cell.png, id=810, 361.35pt x 361.35pt>
-File: figures/probs_on_that_cell.png Graphic file (type png)
-
-<use figures/probs_on_that_cell.png>
-Package pdftex.def Info: figures/probs_on_that_cell.png used on input line 53.
-(pdftex.def)             Requested size: 221.14421pt x 221.14548pt.
-
-Overfull \hbox (5.56721pt too wide) in paragraph at lines 50--55
-[][] 
- []
-
-[46 <./figures/probs_on_that_cell.png>]
-<figures/correction_step.png, id=818, 867.24pt x 252.945pt>
-File: figures/correction_step.png Graphic file (type png)
-
-<use figures/correction_step.png>
-Package pdftex.def Info: figures/correction_step.png used on input line 77.
-(pdftex.def)             Requested size: 460.72124pt x 134.3767pt.
- [47 <./figures/correction_step.png>]
-
-Package caption Warning: \label without proper reference on input line 127.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:best_param_simulated' on page 48 undefined on i
-nput line 116.
-
-
-Underfull \hbox (badness 10000) in alignment at lines 126--126
+ [47 <./figures/training_hist.png>] [48]
+Underfull \hbox (badness 10000) in alignment at lines 119--119
 [][][][][][] 
  []
 
-
-Underfull \vbox (badness 3460) has occurred while \output is active []
-
- [48]
-<figures/test_on_simulated_data.png, id=840, 505.89pt x 325.215pt>
+[49] <figures/test_on_simulated_data.png, id=885, 505.89pt x 325.215pt>
 File: figures/test_on_simulated_data.png Graphic file (type png)
 
 <use figures/test_on_simulated_data.png>
 Package pdftex.def Info: figures/test_on_simulated_data.png used on input line 
-134.
+130.
 (pdftex.def)             Requested size: 368.57838pt x 236.94843pt.
 
-<figures/tracking_sample_for_simulated_data.png, id=842, 951.7959pt x 505.89pt>
+<figures/tracking_sample_for_simulated_data.png, id=886, 951.7959pt x 505.89pt>
 File: figures/tracking_sample_for_simulated_data.png Graphic file (type png)
 <use figures/tracking_sample_for_simulated_data.png>
 Package pdftex.def Info: figures/tracking_sample_for_simulated_data.png used on
- input line 142.
+ input line 137.
 (pdftex.def)             Requested size: 460.72124pt x 244.87775pt.
- [49 <./figures/test_on_simulated_data.png>] <figures/blur_idea.png, id=851, 57
-8.16pt x 578.16pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50 <./figures/test_on_simulated_data.png>]
+<figures/blur_idea.png, id=894, 578.16pt x 578.16pt>
 File: figures/blur_idea.png Graphic file (type png)
 
 <use figures/blur_idea.png>
-Package pdftex.def Info: figures/blur_idea.png used on input line 160.
+Package pdftex.def Info: figures/blur_idea.png used on input line 167.
 (pdftex.def)             Requested size: 276.43555pt x 276.42854pt.
- [50 <./figures/tracking_sample_for_simulated_data.png>]
+ [51 <./figures/tracking_sample_for_simulated_data.png>] [52 <./figures/blur_id
+ea.png>]
 
-Package caption Warning: \label without proper reference on input line 188.
+Package caption Warning: \label without proper reference on input line 229.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:spatial_blur_param_range' on page 51 undefined 
-on input line 176.
+LaTeX Warning: Reference `table:motion_keeping_param_range' on page 53 undefine
+d on input line 218.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 187--187
-[][][] 
- []
-
-[51 <./figures/blur_idea.png>]
-
-Package caption Warning: \label without proper reference on input line 220.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:motion_keeping_param_range' on page 52 undefine
-d on input line 209.
-
-
-Underfull \hbox (badness 10000) in alignment at lines 219--219
+Underfull \hbox (badness 10000) in alignment at lines 228--228
 [][] 
  []
 
-<figures/moving_average_tracking.png, id=868, 867.24pt x 252.945pt>
+
+Underfull \vbox (badness 2368) has occurred while \output is active []
+
+ [53]
+<figures/moving_average_tracking.png, id=925, 867.24pt x 252.945pt>
 File: figures/moving_average_tracking.png Graphic file (type png)
 
 <use figures/moving_average_tracking.png>
 Package pdftex.def Info: figures/moving_average_tracking.png used on input line
- 226.
+ 235.
 (pdftex.def)             Requested size: 460.72124pt x 134.3767pt.
 
-<figures/moving_average_tracking_velocities_1.png, id=869, 1068.8733pt x 361.35
+<figures/moving_average_tracking_velocities_1.png, id=926, 1068.8733pt x 361.35
 pt>
 File: figures/moving_average_tracking_velocities_1.png Graphic file (type png)
  <use figures/moving_average_tracking_velocities_1.png>
 Package pdftex.def Info: figures/moving_average_tracking_velocities_1.png used 
-on input line 227.
+on input line 236.
 (pdftex.def)             Requested size: 460.72124pt x 155.75792pt.
 
 
-Package caption Warning: \label without proper reference on input line 247.
+Package caption Warning: \label without proper reference on input line 256.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:best_param_real' on page 52 undefined on input 
-line 233.
+LaTeX Warning: Reference `table:best_param_real' on page 54 undefined on input 
+line 242.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 246--246
+Underfull \hbox (badness 10000) in alignment at lines 255--255
 [][][][][][][][][][] 
  []
 
 
-Underfull \vbox (badness 1371) has occurred while \output is active []
+Underfull \vbox (badness 1430) has occurred while \output is active []
 
- [52]
+ [54 <./figures/moving_average_tracking.png> <./figures/moving_average_tracking
+_velocities_1.png>]
 
-Package caption Warning: \label without proper reference on input line 266.
+Package caption Warning: \label without proper reference on input line 275.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:real_test_data' on page 53 undefined on input l
-ine 252.
+LaTeX Warning: Reference `table:real_test_data' on page 55 undefined on input l
+ine 261.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 265--265
+Underfull \hbox (badness 10000) in alignment at lines 274--274
 [][][] 
  []
 
-[53 <./figures/moving_average_tracking.png> <./figures/moving_average_tracking_
-velocities_1.png>]
-<figures/test_on_real_data.png, id=893, 650.43pt x 397.485pt>
+<figures/test_on_real_data.png, id=937, 650.43pt x 397.485pt>
 File: figures/test_on_real_data.png Graphic file (type png)
 
 <use figures/test_on_real_data.png>
-Package pdftex.def Info: figures/test_on_real_data.png used on input line 274.
+Package pdftex.def Info: figures/test_on_real_data.png used on input line 283.
 (pdftex.def)             Requested size: 368.57838pt x 225.2466pt.
-) [54 <./figures/test_on_real_data.png>]
+
+<figures/idea.png, id=938, 867.24pt x 505.89pt>
+File: figures/idea.png Graphic file (type png)
+ <use figures/idea.png>
+Package pdftex.def Info: figures/idea.png used on input line 294.
+(pdftex.def)             Requested size: 460.72124pt x 268.75339pt.
+
+<figures/average_occupancy_3.png, id=939, 810.02625pt x 370.38374pt>
+File: figures/average_occupancy_3.png Graphic file (type png)
+
+<use figures/average_occupancy_3.png>
+Package pdftex.def Info: figures/average_occupancy_3.png used on input line 304
+.
+(pdftex.def)             Requested size: 460.72124pt x 210.6688pt.
+
+<figures/average_occupancy_4.png, id=940, 820.06375pt x 366.36874pt>
+File: figures/average_occupancy_4.png Graphic file (type png)
+
+<use figures/average_occupancy_4.png>
+Package pdftex.def Info: figures/average_occupancy_4.png used on input line 305
+.
+(pdftex.def)             Requested size: 460.72124pt x 205.83594pt.
+) [55] [56 <./figures/test_on_real_data.png>] [57 <./figures/idea.png>] [58 <./
+figures/average_occupancy_3.png> <./figures/average_occupancy_4.png>]
+\openout2 = `chap6.aux'.
+
+ (./chap6.tex
+Chapter 6.
+) [59
+
+
+
+
+] [60
+
+
+]
 \openout2 = `Appendix.aux'.
 
-
-(./Appendix.tex
+ (./Appendix.tex
 Appendix A.
-) [55
-
+) [61
 
 
 ]
 \openout2 = `Abbreviations.aux'.
 
- (./Abbreviations.tex [56
+ (./Abbreviations.tex [62
 
 
 
 ]
 Appendix B.
-) [57] (./ThesisLKN.bbl [58
+) [63] (./ThesisLKN.bbl [64
 
 
-] [59] [60]
-Underfull \hbox (badness 1354) in paragraph at lines 181--187
+] [65] [66]
+Underfull \hbox (badness 1354) in paragraph at lines 186--192
 \OT1/cmr/m/n/12 scale data col-lec-tion.  \OT1/cmr/m/it/12 The In-ter-na-tional
  Jour-nal of Robotics Re-search\OT1/cmr/m/n/12 , page
  []
 
-[61])
+[67])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
- [62]
+ [68]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  (./ThesisLKN.aux (./Abstract.aux) (./statement.aux) (./foreword.aux) (./chap1.
 aux) (./chap2.aux) (./chap3.aux) (./chap4.aux) (./chap5.aux)
-(./chap6.aux) (./chap7.aux) (./Appendix.aux) (./Abbreviations.aux))
+(./chap6.aux) (./Appendix.aux) (./Abbreviations.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `ThesisLKN.out' has not changed.
-(rerunfilecheck)             Checksum: 262B15EA1A73385F66A1DA9BD46D21A2;3346.
+(rerunfilecheck)             Checksum: BA9638A66E25164EA75846672A9A40E2;3212.
 
 
 LaTeX Warning: There were undefined references.
@@ -1466,11 +1505,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 11703 strings out of 492995
- 178893 string characters out of 6132703
- 313093 words of memory out of 5000000
- 14657 multiletter control sequences out of 15000+600000
- 19384 words of font info for 72 fonts, out of 8000000 for 9000
+ 11788 strings out of 492995
+ 180737 string characters out of 6132703
+ 311799 words of memory out of 5000000
+ 14712 multiletter control sequences out of 15000+600000
+ 19899 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,15n,48p,1659b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1490,16 +1529,18 @@ xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/tex
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ThesisLKN.pdf (72 pages, 1258178 bytes).
+Output written on ThesisLKN.pdf (78 pages, 1612601 bytes).
 PDF statistics:
- 1069 PDF objects out of 1200 (max. 8388607)
- 902 compressed objects within 10 object streams
- 274 named destinations out of 1000 (max. 500000)
- 515 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1155 PDF objects out of 1200 (max. 8388607)
+ 956 compressed objects within 10 object streams
+ 298 named destinations out of 1000 (max. 500000)
+ 554 words of extra memory for PDF output out of 10000 (max. 10000000)
 

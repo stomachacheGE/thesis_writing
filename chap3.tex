@@ -175,9 +175,9 @@ We then apply uncertainty in acceleration on the predicted velocity $\hat{V}$. T
 P(V_c) = \sum_{\hat{V_c}}{P(V_c|\hat{V_c})P(\hat{V_c})} \label{eq:adding_noise}
 \end{equation}
 where
-\begin{equation*}
-v_c = \hat{v_c} + \omega_a \Delta t, \ \omega_a \sim \mathcal{N}(0, \Sigma)
-\end{equation*}
+\begin{equation}
+v_c = \hat{v_c} + \omega_a \Delta t, \ \omega_a \sim \mathcal{N}(0, \Sigma) \label{eq:adding_noise}
+\end{equation}
 
 For occupancy prediction, the probability of a cell being \textit{not} occupied is firstly calculated. It is easier to calculate since only one case needs to be considered, namely when all possible antecedent cells do not move to that cell.
 \begin{align}

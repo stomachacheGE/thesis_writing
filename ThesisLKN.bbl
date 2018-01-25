@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{45}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -160,6 +160,11 @@ Simon J{\'e}gou, Michal Drozdzal, David Vazquez, Adriana Romero, and Yoshua
   semantic segmentation.
 \newblock In \emph{Computer Vision and Pattern Recognition Workshops (CVPRW),
   2017 IEEE Conference on}, pages 1175--1183. IEEE, 2017.
+
+\bibitem[Kingma and Ba(2014)]{Kingma2014Adam}
+Diederik~P Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock \emph{Computer Science}, 2014.
 
 \bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
   Hinton]{krizhevsky2012imagenet}

@@ -18,29 +18,27 @@
 \contentsline {chapter}{\numberline {4}Implementation Details}{31}{chapter.4}
 \contentsline {section}{\numberline {4.1}Human Trajectory Simulation}{31}{section.4.1}
 \contentsline {section}{\numberline {4.2}Architecture of Neural Network}{33}{section.4.2}
-\contentsline {section}{\numberline {4.3}Implementation of BOFMP}{36}{section.4.3}
-\contentsline {section}{\numberline {4.4}Data Preprocessing}{36}{section.4.4}
-\contentsline {section}{\numberline {4.5}Hyperparameter Tuning}{36}{section.4.5}
-\contentsline {chapter}{\numberline {5}Results and Discussions}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Metrics}{37}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Metrics for Neural Network}{37}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Metrics for Tracking}{37}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Training of Neural Network}{37}{section.5.2}
-\contentsline {section}{\numberline {5.3}Evaluation of Tracking Performance}{38}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Overview of Datasets}{38}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Tracking on Simulated Data}{39}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Tracking on Real Data}{39}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Applications}{39}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusions and Outlooks}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}End to End Training}{41}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{41}{section.6.2}
-\contentsline {chapter}{\numberline {7}Summary of Results}{43}{chapter.7}
-\contentsline {section}{\numberline {7.1} Neural Network Training}{43}{section.7.1}
-\contentsline {section}{\numberline {7.2}Human Trajectory Simulation}{45}{section.7.2}
-\contentsline {section}{\numberline {7.3}Object Tracking using Bayesian Occupancy Filter}{46}{section.7.3}
-\contentsline {section}{\numberline {7.4}Comparision between BOFUM and BOFMP}{47}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}On simulated data}{48}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}On real data}{50}{subsection.7.4.2}
-\contentsline {chapter}{\numberline {A}}{55}{appendix.A}
-\contentsline {chapter}{\numberline {B}Notation und Abk\IeC {\"u}rzungen}{57}{appendix.B}
-\contentsline {chapter}{Bibliography}{59}{appendix*.38}
+\contentsline {section}{\numberline {4.3}Preprocessing of Tracking Data}{37}{section.4.3}
+\contentsline {section}{\numberline {4.4}Implementation of BOFMP}{39}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Extension of Network Output}{39}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Workflow of BOFMP}{41}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Code Structure}{43}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}Results and Discussions}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Metrics}{45}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Metrics for Neural Network}{45}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Metrics for Tracking}{45}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Training of Neural Network}{45}{section.5.2}
+\contentsline {section}{\numberline {5.3}Evaluation of Tracking Performance}{48}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Overview of Datasets}{48}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Tracking on Simulated Data}{48}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}On real data}{51}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Applications}{55}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Future Occupancy Prediction}{55}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Dynamic Analysis}{55}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Get occupancy map}{55}{subsection.5.4.3}
+\contentsline {chapter}{\numberline {6}Conclusions and Outlooks}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}End to End Training}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{59}{section.6.2}
+\contentsline {chapter}{\numberline {A}}{61}{appendix.A}
+\contentsline {chapter}{\numberline {B}Notation und Abk\IeC {\"u}rzungen}{63}{appendix.B}
+\contentsline {chapter}{Bibliography}{65}{appendix*.45}
