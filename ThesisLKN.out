@@ -1,7 +1,7 @@
 \BOOKMARK [1][]{sec:abstract.1}{Abstract}{}% 1
 \BOOKMARK [1][]{sec:statement.1}{Statement}{}% 2
 \BOOKMARK [1][]{sec:vorwort.1}{Foreword}{}% 3
-\BOOKMARK [0][]{chapter*.4}{Contents}{}% 4
+\BOOKMARK [0][]{chapter*.6}{Contents}{}% 4
 \BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 5
 \BOOKMARK [0][]{chapter.2}{2 Literature Review}{}% 6
 \BOOKMARK [1][]{section.2.1}{2.1 Object Tracking}{chapter.2}% 7
@@ -37,10 +37,8 @@
 \BOOKMARK [1][]{section.5.4}{5.4 Applications}{chapter.5}% 37
 \BOOKMARK [2][]{subsection.5.4.1}{5.4.1 Future Occupancy Prediction}{section.5.4}% 38
 \BOOKMARK [2][]{subsection.5.4.2}{5.4.2 Dynamic Analysis}{section.5.4}% 39
-\BOOKMARK [2][]{subsection.5.4.3}{5.4.3 Get occupancy map}{section.5.4}% 40
+\BOOKMARK [2][]{subsection.5.4.3}{5.4.3 Predict Occupied Area}{section.5.4}% 40
 \BOOKMARK [0][]{chapter.6}{6 Conclusions and Outlooks}{}% 41
 \BOOKMARK [1][]{section.6.1}{6.1 End to End Training}{chapter.6}% 42
 \BOOKMARK [1][]{section.6.2}{6.2 Future Work}{chapter.6}% 43
-\BOOKMARK [0][]{appendix.A}{A }{}% 44
-\BOOKMARK [0][]{appendix.B}{B Notation und Abk\374rzungen}{}% 45
-\BOOKMARK [0][]{appendix*.45}{Bibliography}{}% 46
+\BOOKMARK [0][]{appendix*.47}{Bibliography}{}% 44

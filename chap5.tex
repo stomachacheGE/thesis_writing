@@ -81,12 +81,29 @@ In this thesis, we set $t_{lost}=9$ and $n=8$, i.e., both tracking and future pr
 
 \textbf{Simulated Dataset}
 
-We generated 500 scenes as training set for tuning filter parameters and 500 scenes for test set. Training and test data are generated from different maps. In these scenes, there are either one or two walking humans.
+We generated 500 scenes as training set for tuning filter parameters and 500 scenes for test set. Training and test data are generated from different maps. In these scenes, there are either one or two walking humans. Two examples of scenes in training set are shown in Figure \ref{fig:sample_scene_simulated}.
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=.99\textwidth]{figures/simulated_dataset_1_persons_with_traj.png}
+    \includegraphics[width=\textwidth]{figures/simulated_dataset_2_persons_with_traj.png}
+    \caption[Two examples of scenes in simulated training set.]{Two examples of scenes in simulated training set. Each person is indicated by a red square and the lines show the trajectory for each person. \textbf{Up}: This example shows a person firstly make a turn and then go straight along the corridor. \textbf{Down}: Two persons are walking in the map window with different speed. Clearly, the one the gray trajectory has a higher speed than the one with green trajectory.}
+    \label{fig:sample_scene_simulated}
+
+    \vspace*{\floatsep}
+
+    \includegraphics[width=.98\textwidth]{figures/real_dataset_1_persons_1_crop.png}
+    \includegraphics[width=\textwidth]{figures/real_dataset_1_persons_crop.png}
+    \caption[Two examples of scenes in real training set.]{Two examples of scenes in real training set. \textbf{Up}: This example shows a person going from bottom towards the door in the upper right corner. \textbf{Down}: It shows a person is making a turn. }
+    \label{fig:sample_scene_real}
+
+
+\end{figure}
+
 
 \textbf{Real Dataset}
 
-Although our neural network are trained on simulated human trajectories, we expect that our method also outperforms BOFUM on real tracking scenes. We record human trajectories on two different maps by a laser scanner mounted on a robot. After processing raw laser data, we get 500 tracking scenes for training from one of the maps and 244 scenes for test from the other. 
-
+Although our neural network are trained on simulated human trajectories, we expect that our method outperforms BOFUM on real tracking scenes. We record human trajectories on two different maps by a laser scanner mounted on a robot. After processing raw laser data, we get 500 tracking scenes for training from one of the maps and 244 scenes for test from the other. Figure \ref{fig:sample_scene_real} shows twos examples of scenes in training set.
 
 \subsection{Tracking on Simulated Data}
 
@@ -200,22 +217,21 @@ where $G \sim \mathcal{N}(\mathbf{0}, \Sigma)$ is a 2-dimensional discrete Gauss
 
 \textbf{Motion keeping for future prediction}
 
-Our proposed BOFMP, just like BOFUM, is \textit{memory-less}. That is to say, the last time step of tracking stage has absolute influence on future predictions, and the time steps before the last step has no influence at all. In the real data we recorded, a time step equals to 0.25 second in real time. However, this short period of time is not able to summarize a person's motion in the past time steps. Therefore, we propose to add moving average velocity of last few times steps to the predicted velocity $P(V_{pred})$ (which is $P(\hat{V})$ in Equation \ref{eq:adding_noise}), and then calculate next velocity $P(V)$ from it. This process of incorporating moving average velocity is called as \textit{motion keeping}. It starts from the beginning of future prediction stage ($t=9$ in our setting) and the influence of moving average velocity is exponentially decreased over the following time steps.
+Our proposed BOFMP, just like BOFUM, is \textit{memory-less}. That is to say, the last time step of tracking stage has absolute influence on future predictions, and the time steps before the last step has no influence at all. In the real data we recorded, a time step equals to 0.25 second in real time. However, this short period of time is not able to summarize a person's motion in the past time steps. Therefore, we propose to add moving average velocity of last few times steps to the predicted velocity $P(V_{pred})$ (which is $P(\hat{V})$ in Equation \ref{eq:adding_noise}), and then calculate next velocity $P(V)$ from it. This process of incorporating moving average velocity is called as \textit{motion keeping}. It starts from the beginning of future prediction stage ($t=9$ in our setting) and the influence of moving average velocity is exponentially decreased for the later time steps.
 
-Motion keeping also introduces new parameters. Assume the measurement is lost since time step $t_{lost}$, the new parameters are: 
+Motion keeping also introduces new parameters. Assuming the measurement is lost since time step $t_{lost}$, the new parameters are: 
 \begin{my_enumerate}
-\item \textbf{window size $w$}. It determines how many last time steps are considered when caculate moving average velocity .
-\item \textbf{initial motion factor \( initMF\)}. This coefficent determines at the beginning of future predicition stage (i.e., $t=t_{lost}$), how much of moving average velocity $P\{V_{ma}\}$ is incorporated into predicted velocity $P\{V_{pred}\}$. 
-\item \textbf{keep motion factor \( keepMF \)}. This constant is the base of the exponential function used to decrease moving average velocity $P\{V_{ma}\}$ over the following time steps. Therefore, for $t \geq t_{lost}$, 
-
+\item \textbf{window size $w$}. It determines how many last time steps are considered when calculate moving average velocity .
+\item \textbf{initial motion factor \( initMF\)}. This coefficient determines how much of moving average velocity $P(V_{ma})$ is incorporated into predicted velocity $P(V_{pred})$ for the first time step of future prediction stage (i.e., $t=t_{lost}$),. 
+\item \textbf{keep motion factor \( keepMF \)}. This constant is the base of the exponential function used to decrease moving average velocity $P(V_{ma})$ for the later time steps. Therefore, for $t \geq t_{lost}$, 
 \begin{align}
-factor &= initMF \times keepMF^{(t-t_{lost})} \\
-P\{V_{merge}\} &= factor \times P\{V_{ma}\} + (1-factor) \times P\{V_{pred}\}
+factor &= initMF \times keepMF^{t-t_{lost}} \\
+P(V_{merge}) &= factor \times P(V_{ma}) + (1-factor) \times P(V_{pred})
 \end{align}
 
 \end{my_enumerate}
 
-The value ranges of these parameters are listed in Table \ref{table:motion_keeping_param_range}. One example of tracking on real data using motion keeping is shown in Figure \ref{fig:keep_motion_idea}.
+The value ranges of these parameters are listed in Table \ref{table:motion_keeping_param_range}. One example of tracking on real scene with motion keeping is shown in Figure \ref{fig:keep_motion_idea}.
 \begin{table}[H]
 \centering  
 \begin{tabularx}{.3\textwidth}{c|c}
@@ -226,39 +242,39 @@ The value ranges of these parameters are listed in Table \ref{table:motion_keepi
      $keepMF$ & \( [0.3, 0.8]\) \\    
    \hline
   \end{tabularx}
-\label{table:motion_keeping_param_range}
 \caption{Parameters introduced by motion keeping and their value ranges.}
+\label{table:motion_keeping_param_range}
 \end{table}
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figures/moving_average_tracking.png}
 \includegraphics[width=\textwidth]{figures/moving_average_tracking_velocities_1.png}
-\caption{\textbf{Up}: Three tracking steps of BOFMP with motion keeping. A person is walking from upper left towards lower right. The measurement is lost at $t=9$. \textbf{Down}: Velocities of the cell pointed by the red arrow at $t=8$. On each plot, the most possible direction is shown by the green arrows. Based on measurements from $t=7$ and $t=8$, the predicted velocity $P\{V_{pred}\}$ shows it is more likely the occupancy will propagates towards right for the next time step. However, past motion trend, which is represented by $P\{V_{ma}\}$, shows it is more likely to move to lower right. As a consequnce, BOFMP with motion keeping shows there are possibilities going both right and lower right, which is more realistic in this tracking example.}
+\caption{\textbf{Up}: Three tracking steps of BOFMP with motion keeping. A person is walking from upper left towards lower right. The measurement is lost at $t=9$. \textbf{Down}: Velocities of the cell pointed by the red arrow at $t=8$. On each plot, the most possible direction is shown by green arrows. Based on measurements from $t=7$ and $t=8$, the predicted velocity $P(V_{pred})$ shows it is more likely the occupancy will propagates towards right for the next time step. However, the motion trend, which is represented by $P(V_{ma})$, shows it is more likely to move to lower right. As a consequence, BOFMP with motion keeping shows there are possibilities going both right and lower right, which is more realistic in this tracking example.}
 \label{fig:keep_motion_idea}
 \end{figure}
 
 
-We randonly sample 100 sets of parameters for each scenario, evaluate them on validation set, and select the best set of parameters based on the mean of average precisions for the future prediction stage ($t=9:16$). The best parameters are shown in Table \ref{table:best_param_real}.
+We randomly sample 100 sets of parameters for each scenario, evaluate them on training set, and select the best set of parameters based on the mean of average precisions for the future prediction stage ($t=9:16$). The best parameters are shown in Table \ref{table:best_param_real}.
 
 \begin{table}[H]
 \footnotesize
 \centering  
 \begin{tabularx}{\textwidth}{c|c|c|c|c|c|c|c|c|c}
     \hline
-    & $ e $ & $ \delta^2 $ & $ \Omega $ & \sml{blurExt} & \sml{blurVar} & $w$ & \sml{initMF} & \sml{keepMF}  & \footnotesize{mean a.p.}\\ \hline \hline
+    & $ e $ & $ \delta^2 $ & $ \Omega $ & \sml{blurExt} & \sml{blurVar} & $w$ & \sml{initMF} & \sml{keepMF}  & \footnotesize{mean of a.p.}\\ \hline \hline
     BOFUM & 5 & 0.677 & 0.152  & - & - & - & - & - & 0.302   \\ \hline
     BOFMP & 5 & 0.649 & 0.191  & - & - & - & - & - & 0.321  \\
     \scriptsize{BOFMP spatial blurring} & 5 & 0.636 & 0.100  & 5 & 1.093 & - & - & - & 0.327  \\
     \scriptsize{BOFMP motion keeping} & 7 & 0.744 & 0.026  & - & - & 4 & 0.563 & 0.707 & 0.381  \\
    \hline
 \end{tabularx}
-\label{table:best_param_real}
 \caption{Best parameters for BOFUM and BOFMP on real data.}
+\label{table:best_param_real}
 \end{table}
 
 \normalsize
-Then we apply each filter with its best parameters on test data of 244 tracking cases. Figure \ref{fig:real_test_data} shows the average precision for each time step, and Table \ref{table:real_test_data} lists the average precision in future prediction stage and their mean. Compared with BOFUM, our methods have performance gain of $29\%$, $31\%$ and $43\%$ respectively.
+Then we apply each filter with its best parameters on test data of 244 scenes. Table \ref{table:real_test_data} lists the average precision in future prediction stage and their mean. Compared with BOFUM, our methods have performance gain of $29\%$, $31\%$ and $43\%$ respectively. Figure \ref{fig:real_test_data} shows the average precision for each time step. One can see that, as in the case of simulated data, average precision starts with values close to zero, and increase rapidly over the next two time steps. From $t=3$ to $t=8$, average precisions keep rather stable at high values, which proves that filters predict very well for the next immediate step. In future prediction stage ($t=9:16$), average precisions decrease severely as time horizon increases, since the state of the world becomes more uncertain. However, our BOFMP and its variants are still better than their baseline BOFUM for every time step in the future prediction stage.
 
 \begin{table}[H]
 \footnotesize
@@ -272,8 +288,8 @@ Then we apply each filter with its best parameters on test data of 244 tracking 
     \scriptsize{BOFMP motion keeping} &  0.762  0.675  0.561  0.496  0.405  0.353  0.305  0.238 & 0.474  \\
    \hline
   \end{tabularx}
-\label{table:real_test_data}
 \caption{Future predictions for BOFUM and BOFMP on real data.}
+\label{table:real_test_data}
 \end{table}
 \normalsize
 
@@ -281,7 +297,7 @@ Then we apply each filter with its best parameters on test data of 244 tracking 
   \centering
    \captionsetup{width=\linewidth}
     \includegraphics[width=.8\textwidth]{figures/test_on_real_data.png}
-    \caption{Evaluation results on real test data. Like for simulated data, average precision starts with values close to zero, and increase rapidly over the next two time steps. From $t=3$ to $t=8$, average precisions keep rather stable at high values, which proves that filters predict very well for the next immediate step. In future prediction stage ($t=9:16$), average precisions decrease severely as time horizon increases, since the state of the world becomes more uncertain. However, our BOFMP and its variations are still better than BOFUM for every time step in this stage.}
+    \caption{Evaluation results on real test data. In the future prediction stage, our BOFMP and its variants are better than their baseline BOFUM for every time step, i.e., $t=9:16$.}
     \label{fig:real_test_data}
 \end{figure}
 
@@ -289,15 +305,17 @@ Then we apply each filter with its best parameters on test data of 244 tracking 
 
 \subsection{Future Occupancy Prediction}
 
+Embedded with an accurate motion model of the tracking objects, our proposed BOFMP is able to predict reasonable occupancies even after a few time steps without measurements. This is demonstrated in Figure \ref{fig:idea}, where we show that our predictions on future occupancy outperform the baseline BOFUM. The accuracy of future occupancy prediction is critical in many applications, such as collision avoidance and path planing. Although our method of learning motion model is only demonstrated in the scenario of human tracking, it is applicable in other cases such as car tracking in ADAS systems. Therefore, our proposed method has huge potential in these applications. 
+
 \begin{figure}[ht]
   \centering
     \includegraphics[width=\textwidth]{figures/idea.png}
-    \caption{Occupancy predictions for BOFUM and our proposed BOFMP after several time steps. The map shows a T-section. At $t=0$, a person is shown as a red rectangle and with initial velocity towards left. At $t=15$, the person encounters intersection. BOFUM has no information about human motion pattern, and continues to propagate occupancy towards left. Our BOFMP knows that humans are likely to turn to either upper or lower corridors. At $t=30$, since occupancies going left vanish due to the wall, BOFUM predicts occupancies in corridors, but they are biased towards walls on the left. Our BOFMP predicts more occupancies in the middle of corridors, since it knows humans are more likely to walk in the middle.}
+    \caption{Occupancy predictions for BOFUM and our proposed BOFMP after several time steps without measurements. The map shows a Y-fork. At $t=0$, a person is shown as a red rectangle and with initial velocity towards left. At $t=15$, the person encounters intersection. BOFUM has no information about human motion pattern, and continues to propagate occupancy towards left. Our BOFMP knows that humans are likely to turn to either upper or lower corridors. At $t=30$, since occupancies going left vanish due to the wall, BOFUM predicts occupancies in corridors, but they are biased towards walls on the left. Our BOFMP predicts more occupancies in the middle of corridors, since it knows humans are more likely to walk in the middle.}
     \label{fig:idea}
 \end{figure}
 
 \subsection{Dynamic Analysis}
-\subsection{Get occupancy map}
+\subsection{Predict Occupied Area}
 
 \begin{figure}[ht]
   \centering

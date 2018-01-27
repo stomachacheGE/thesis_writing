@@ -10,8 +10,6 @@ A level-1 auxiliary file: chap3.aux
 A level-1 auxiliary file: chap4.aux
 A level-1 auxiliary file: chap5.aux
 A level-1 auxiliary file: chap6.aux
-A level-1 auxiliary file: Appendix.aux
-A level-1 auxiliary file: Abbreviations.aux
 The style file: plainnat.bst
 Database file #1: Bibliography.bib
 Repeated entry---line 139 of file Bibliography.bib
@@ -21,7 +19,7 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in de2017dynamic
 You've used 45 entries,
             2773 wiz_defined-function locations,
-            850 strings with 14283 characters,
+            848 strings with 14254 characters,
 and the built_in function-call counts, 26301 in all, are:
 = -- 2432
 > -- 1550
