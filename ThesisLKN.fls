@@ -254,6 +254,12 @@ INPUT ThesisLKN.toc
 INPUT ThesisLKN.toc
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT ThesisLKN.toc
+INPUT ThesisLKN.lof
+INPUT ThesisLKN.lof
+OUTPUT ThesisLKN.lof
+INPUT ThesisLKN.lot
+INPUT ThesisLKN.lot
+OUTPUT ThesisLKN.lot
 OUTPUT chap1.aux
 INPUT chap1.tex
 INPUT chap1.tex
@@ -397,6 +403,9 @@ INPUT ./figures/moving_average_tracking.png
 INPUT figures/moving_average_tracking_velocities_1.png
 INPUT ./figures/moving_average_tracking_velocities_1.png
 INPUT ./figures/moving_average_tracking_velocities_1.png
+INPUT figures/tracking_sample_for_real_data_1.png
+INPUT ./figures/tracking_sample_for_real_data_1.png
+INPUT ./figures/tracking_sample_for_real_data_1.png
 INPUT figures/test_on_real_data.png
 INPUT ./figures/test_on_real_data.png
 INPUT ./figures/test_on_real_data.png
@@ -412,6 +421,8 @@ INPUT ./figures/average_occupancy_4.png
 OUTPUT chap6.aux
 INPUT chap6.tex
 INPUT chap6.tex
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ThesisLKN.bbl
 INPUT ThesisLKN.bbl
 INPUT ThesisLKN.aux
@@ -457,4 +468,6 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

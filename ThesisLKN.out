@@ -2,43 +2,43 @@
 \BOOKMARK [1][]{sec:statement.1}{Statement}{}% 2
 \BOOKMARK [1][]{sec:vorwort.1}{Foreword}{}% 3
 \BOOKMARK [0][]{chapter*.6}{Contents}{}% 4
-\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 5
-\BOOKMARK [0][]{chapter.2}{2 Literature Review}{}% 6
-\BOOKMARK [1][]{section.2.1}{2.1 Object Tracking}{chapter.2}% 7
-\BOOKMARK [1][]{section.2.2}{2.2 Dynamics Modeling}{chapter.2}% 8
-\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Human Motion Modeling}{section.2.2}% 9
-\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Dynamic Environment Modeling}{section.2.2}% 10
-\BOOKMARK [1][]{section.2.3}{2.3 Neural Networks}{chapter.2}% 11
-\BOOKMARK [0][]{chapter.3}{3 Background Knowledge}{}% 12
-\BOOKMARK [1][]{section.3.1}{3.1 Bayesian Occupancy Filter}{chapter.3}% 13
-\BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Bayesian Filtering}{section.3.1}% 14
-\BOOKMARK [2][]{subsection.3.1.2}{3.1.2 BOFUM Formulation}{section.3.1}% 15
-\BOOKMARK [2][]{subsection.3.1.3}{3.1.3 BOF with Motion Pattern \(BOFMP\)}{section.3.1}% 16
-\BOOKMARK [1][]{section.3.2}{3.2 Convolutional Neural Network}{chapter.3}% 17
-\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Densely Connected Convolutional Networks }{section.3.2}% 18
-\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Fully Convolutional DenseNet}{section.3.2}% 19
-\BOOKMARK [0][]{chapter.4}{4 Implementation Details}{}% 20
-\BOOKMARK [1][]{section.4.1}{4.1 Human Trajectory Simulation}{chapter.4}% 21
-\BOOKMARK [1][]{section.4.2}{4.2 Architecture of Neural Network}{chapter.4}% 22
-\BOOKMARK [1][]{section.4.3}{4.3 Preprocessing of Tracking Data}{chapter.4}% 23
-\BOOKMARK [1][]{section.4.4}{4.4 Implementation of BOFMP}{chapter.4}% 24
-\BOOKMARK [2][]{subsection.4.4.1}{4.4.1 Extension of Network Output}{section.4.4}% 25
-\BOOKMARK [2][]{subsection.4.4.2}{4.4.2 Workflow of BOFMP}{section.4.4}% 26
-\BOOKMARK [2][]{subsection.4.4.3}{4.4.3 Code Structure}{section.4.4}% 27
-\BOOKMARK [0][]{chapter.5}{5 Results and Discussions}{}% 28
-\BOOKMARK [1][]{section.5.1}{5.1 Metrics}{chapter.5}% 29
-\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Metrics for Neural Network}{section.5.1}% 30
-\BOOKMARK [2][]{subsection.5.1.2}{5.1.2 Metrics for Tracking}{section.5.1}% 31
-\BOOKMARK [1][]{section.5.2}{5.2 Training of Neural Network}{chapter.5}% 32
-\BOOKMARK [1][]{section.5.3}{5.3 Evaluation of Tracking Performance}{chapter.5}% 33
-\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 Overview of Datasets}{section.5.3}% 34
-\BOOKMARK [2][]{subsection.5.3.2}{5.3.2 Tracking on Simulated Data}{section.5.3}% 35
-\BOOKMARK [2][]{subsection.5.3.3}{5.3.3 On real data}{section.5.3}% 36
-\BOOKMARK [1][]{section.5.4}{5.4 Applications}{chapter.5}% 37
-\BOOKMARK [2][]{subsection.5.4.1}{5.4.1 Future Occupancy Prediction}{section.5.4}% 38
-\BOOKMARK [2][]{subsection.5.4.2}{5.4.2 Dynamic Analysis}{section.5.4}% 39
-\BOOKMARK [2][]{subsection.5.4.3}{5.4.3 Predict Occupied Area}{section.5.4}% 40
-\BOOKMARK [0][]{chapter.6}{6 Conclusions and Outlooks}{}% 41
-\BOOKMARK [1][]{section.6.1}{6.1 End to End Training}{chapter.6}% 42
-\BOOKMARK [1][]{section.6.2}{6.2 Future Work}{chapter.6}% 43
-\BOOKMARK [0][]{appendix*.47}{Bibliography}{}% 44
+\BOOKMARK [0][]{chapter*.7}{List of Figures}{}% 5
+\BOOKMARK [0][]{chapter*.8}{List of Tables}{}% 6
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 7
+\BOOKMARK [0][]{chapter.2}{2 Literature Review}{}% 8
+\BOOKMARK [1][]{section.2.1}{2.1 Object Tracking}{chapter.2}% 9
+\BOOKMARK [1][]{section.2.2}{2.2 Dynamics Modeling}{chapter.2}% 10
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Human Motion Modeling}{section.2.2}% 11
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Dynamic Environment Modeling}{section.2.2}% 12
+\BOOKMARK [1][]{section.2.3}{2.3 Neural Networks}{chapter.2}% 13
+\BOOKMARK [0][]{chapter.3}{3 Theoretical Background}{}% 14
+\BOOKMARK [1][]{section.3.1}{3.1 Bayesian Occupancy Filter}{chapter.3}% 15
+\BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Bayesian Filtering}{section.3.1}% 16
+\BOOKMARK [2][]{subsection.3.1.2}{3.1.2 BOFUM Formulation}{section.3.1}% 17
+\BOOKMARK [2][]{subsection.3.1.3}{3.1.3 BOF with Motion Pattern \(BOFMP\)}{section.3.1}% 18
+\BOOKMARK [1][]{section.3.2}{3.2 Convolutional Neural Network}{chapter.3}% 19
+\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Densely Connected Convolutional Networks }{section.3.2}% 20
+\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Fully Convolutional DenseNet}{section.3.2}% 21
+\BOOKMARK [0][]{chapter.4}{4 Implementation Details}{}% 22
+\BOOKMARK [1][]{section.4.1}{4.1 Human Trajectory Simulation}{chapter.4}% 23
+\BOOKMARK [1][]{section.4.2}{4.2 Architecture of Neural Network}{chapter.4}% 24
+\BOOKMARK [1][]{section.4.3}{4.3 Preprocessing of Tracking Data}{chapter.4}% 25
+\BOOKMARK [1][]{section.4.4}{4.4 Implementation of BOFMP}{chapter.4}% 26
+\BOOKMARK [2][]{subsection.4.4.1}{4.4.1 Extension of Network Output}{section.4.4}% 27
+\BOOKMARK [2][]{subsection.4.4.2}{4.4.2 Workflow of BOFMP}{section.4.4}% 28
+\BOOKMARK [2][]{subsection.4.4.3}{4.4.3 Code Structure}{section.4.4}% 29
+\BOOKMARK [0][]{chapter.5}{5 Results and Discussions}{}% 30
+\BOOKMARK [1][]{section.5.1}{5.1 Metrics}{chapter.5}% 31
+\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Metrics for Neural Network}{section.5.1}% 32
+\BOOKMARK [2][]{subsection.5.1.2}{5.1.2 Metrics for Tracking}{section.5.1}% 33
+\BOOKMARK [1][]{section.5.2}{5.2 Training of Neural Network}{chapter.5}% 34
+\BOOKMARK [1][]{section.5.3}{5.3 Evaluation of Tracking Performance}{chapter.5}% 35
+\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 Overview of Datasets}{section.5.3}% 36
+\BOOKMARK [2][]{subsection.5.3.2}{5.3.2 Tracking on Simulated Data}{section.5.3}% 37
+\BOOKMARK [2][]{subsection.5.3.3}{5.3.3 Tracking On Real Data}{section.5.3}% 38
+\BOOKMARK [1][]{section.5.4}{5.4 Applications}{chapter.5}% 39
+\BOOKMARK [2][]{subsection.5.4.1}{5.4.1 Future Occupancy Prediction}{section.5.4}% 40
+\BOOKMARK [2][]{subsection.5.4.2}{5.4.2 Predict Frequently Occupied Area}{section.5.4}% 41
+\BOOKMARK [0][]{chapter.6}{6 Conclusions and Outlooks}{}% 42
+\BOOKMARK [1][]{section.6.1}{6.1 Future Work}{chapter.6}% 43
+\BOOKMARK [0][]{appendix*.48}{Bibliography}{}% 44

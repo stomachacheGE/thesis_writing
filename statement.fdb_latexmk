@@ -1,12 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1517044520 "statement.tex" "statement.pdf" "statement" 1517044520
+["pdflatex"] 1517149404 "statement.tex" "statement.pdf" "statement" 1517149404
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1480098701 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf" 1494087824 32646 eadc4ca26cdbe7105ac7c593aa8c4f72 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1513965261 4129593 f9567c70adf606a9f3731316ecd1cd2a ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "statement.aux" 1517044479 1047 5b30d0ccae38b647eeec0113397dc11b ""
-  "statement.tex" 1517044520 365 f8760cf1111520984fc097b362c40d3c ""
+  "statement.aux" 1517149355 1047 5b30d0ccae38b647eeec0113397dc11b ""
+  "statement.tex" 1517149404 363 25ede44b85493bb239fba6bd84c6902c ""
   (generated)
-  "statement.log"
   "statement.pdf"
+  "statement.log"

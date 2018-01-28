@@ -17,45 +17,45 @@ Repeated entry---line 139 of file Bibliography.bib
  :                                ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in de2017dynamic
-You've used 45 entries,
+You've used 46 entries,
             2773 wiz_defined-function locations,
-            848 strings with 14254 characters,
-and the built_in function-call counts, 26301 in all, are:
-= -- 2432
-> -- 1550
-< -- 41
-+ -- 520
-- -- 474
-* -- 2063
-:= -- 3788
-add.period$ -- 152
-call.type$ -- 45
-change.case$ -- 291
-chr.to.int$ -- 44
-cite$ -- 91
-duplicate$ -- 1245
-empty$ -- 2059
-format.name$ -- 539
-if$ -- 5750
+            853 strings with 14410 characters,
+and the built_in function-call counts, 26873 in all, are:
+= -- 2488
+> -- 1571
+< -- 43
++ -- 527
+- -- 480
+* -- 2098
+:= -- 3862
+add.period$ -- 155
+call.type$ -- 46
+change.case$ -- 296
+chr.to.int$ -- 45
+cite$ -- 93
+duplicate$ -- 1277
+empty$ -- 2112
+format.name$ -- 548
+if$ -- 5883
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 46
-newline$ -- 233
-num.names$ -- 180
-pop$ -- 640
+missing$ -- 47
+newline$ -- 238
+num.names$ -- 184
+pop$ -- 653
 preamble$ -- 1
-purify$ -- 247
+purify$ -- 251
 quote$ -- 0
-skip$ -- 1047
+skip$ -- 1076
 stack$ -- 0
-substring$ -- 1154
-swap$ -- 323
-text.length$ -- 28
+substring$ -- 1188
+swap$ -- 334
+text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 490
+type$ -- 501
 warning$ -- 1
-while$ -- 222
+while$ -- 228
 width$ -- 0
-write$ -- 602
+write$ -- 615
 (There was 1 error message)

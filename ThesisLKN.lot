@@ -3,16 +3,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Structure of each component in Figure \ref {fig:tiramisu}.\relax }}{36}{table.caption.22}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Number of feature maps at the end of blocks.\relax }}{36}{table.caption.23}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Parameter ranges for BOF filters.\relax }}{18}{table.caption.11}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Best parameters for BOFUM and BOFMP on simulated data.\relax }}{18}{table.caption.12}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Parameters introduced by spatial blurring and their value ranges.\relax }}{21}{table.caption.16}
-\contentsline {table}{\numberline {7.4}{\ignorespaces Parameters introduced by motion keeping and their value ranges.\relax }}{22}{table.caption.17}
-\contentsline {table}{\numberline {7.5}{\ignorespaces Best parameters for BOFUM and BOFMP on real data.\relax }}{22}{table.caption.19}
-\contentsline {table}{\numberline {7.6}{\ignorespaces Future predictions for BOFUM and BOFMP on real data.\relax }}{23}{table.caption.20}
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Simulation Parameters and Values\relax }}{25}{table.caption.23}
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Number of samples in training, validation and test set.\relax }}{47}{table.caption.30}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Cross entropy loss on test data.\relax }}{49}{table.caption.32}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Value ranges of filter parameters for simulated data.\relax }}{51}{table.caption.34}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Best parameters for BOFUM and BOFMP on simulated data.\relax }}{51}{table.caption.35}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Value ranges for filter parameters on real data.\relax }}{52}{table.caption.37}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Parameters introduced by spatial blurring and their value ranges.\relax }}{54}{table.caption.39}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Parameters introduced by motion keeping and their value ranges.\relax }}{55}{table.caption.40}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Best parameters for BOFUM and BOFMP on real data.\relax }}{56}{table.caption.42}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Future predictions for BOFUM and BOFMP on real data.\relax }}{57}{table.caption.44}
 \addvspace {10\p@ }

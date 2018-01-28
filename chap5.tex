@@ -1,22 +1,47 @@
 %!TEX root = ThesisLKN.tex
 \chapter{Results and Discussions} \label{chapter:5}
 
+In this chapter, we firstly introduce the metrics used in this thesis in Section \ref{sec:metrics}. The results of training of neural network are presented in Section \ref{sec:train_cnn}. In Section \ref{sec:eval_tracking}, an overview of the scenes used for tracking is firstly given, and the tracking performance of BOFMP and its baseline BOFUM is presented. In Section \ref{sec:application}, how BOFMP can be used in different applications is presented. 
 
 \section{Metrics} \label{sec:metrics}
 
 \subsection{Metrics for Neural Network}
 
+Training of a neural network is essentially optimizing a loss function, which is a measurement of inconsistency between network output and the ground truth. In our case, the network is trained to learn the motion pattern probability distribution $P_c(V^{ex}|V^{en})$. A common metric used for measuring the inconsistency between two probability distributions is \textit{cross entropy}. Assume the ground truth distribution is $p$, and the predicted distribution is $q$, the cross entropy between $p$ and $q$ is defined as:
+\begin{equation}
+H(p, q) = \sum_i p_i \log \frac{1}{q_i} = - \sum_i p_i \log q_i
+\end{equation}
+In information theory, $H(p, q)$ can be interpreted as the expected number of bits per message needed to encode events drawn from true distribution $p$, if using an optimal code for distribution $q$.
+
 \subsection{Metrics for Tracking}
 
-The possible metrics that could be used for measuring the consistency between occupancy predicition and ground truth are: \textit{cross entropy}, \textit{f1 score} and \textit{average precision}.  We choose average precision as our metric and the reasons will be detailed in the thesis.
+In our tracking application, a cell in the map is either \textit{occupied} or \textit{not occupied}. The goal of tracking is, for each time step, to classify the state of a cell into one of these two occupancy states as accurate as possible. This task is similar to that in document retrieval, where the relevant documents should be retrieved as early as possible based on their ranking scores. Commonly, there are four cases when a classification is made in such a binary classification problem: $TP$(true positive), $TN$(true negative), $FP$(false positive) and $FN$(false negative). Two common metrics are defined as:
+\begin{align}
+precision &= \frac{TP}{TP+FP} \\
+recall &= \frac{TP}{TP+FN}
+\end{align} 
+However, judging the performance of a classifier based on  only precision or recall is illusive, since they can be easily manipulated by assign all samples as positive or negative. Therefore, $F_1$ score, which is the weighted harmonic mean of precision and recall, is more commonly used.
+\begin{equation}
+F_1 = 2\cdot\frac{ precision \cdot recall}{precision+recall}
+\end{equation}
 
-\section{Training of Neural Network}
+However, to calculate $F_1$ requires a predefined threshold. In our tracking application, the absolute value of occupancy probabilities may fluctuate a lot between time steps, because the uncertainty on next possible locations changes based on the current location of the tracking object. This makes defining a fixed threshold problematic. Therefore, we use \textbf{average precision} as our metric for measuring tracking performance, since it is calculated based on the ranking of probabilities instead of on their absolute values. Average precision summarizes the precision-recall $p(r)$ curve by computing the average precision over the interval from $r=0$ to $r=1$:
+\begin{equation}
+AP = \int_0^1 p(r) dr
+\end{equation}
+which is the area under the precision-recall curve (PR-AUC). In practice, it is normally calculated as:
+\begin{equation}
+AP = \sum_n p_n\Delta r_n =\sum_n p_n \cdot (r_{n}-r_{n-1})
+\end{equation} 
+where $p_n$ and $r_n$ are precision and recall at $n$-th threshold. In many current implementations, the values of AP and PR-AUC are different, since PR-AUC is normally calculated using linear interpolation and can be too optimistic \cite{flach2015precision}.   
+
+\section{Training of Neural Network} \label{sec:train_cnn}
 
 After the data is collected as described in Section \ref{sec:traj_sim}, we split them into training, validation and test set. The training and validation set are sampled from seven full maps, and test set is sampled from a separate map. The number of samples we generated are summarized in Table \ref{table:nos}. 
 
 Figure \ref{fig:trajs} shows one example of map window as network input and its ground truth. On the left, a cell is labeled with red color, and the sampled trajectories that go through this cell are displayed. On the right, it shows a visualization of the ground truth \( P_c(V^{ex} | V^{en}) \) for that red cell. The axes show velocities on \( x, y\) directions. Since we assume a person has maximum speed of 1 $cell/timestep$, the velocities must be in range $[-1,1]. $Outer axes represent entering direction \( V^{en} \), and inner represents exit velocity \( V^{ex} \). One can see that \( P(V^{ex}=DL | V^{en}=DL) = 0.13 \) and \( P(V^{ex}=D | V^{en}=DL) = 0.87 \) \footnote{DL represents going down-left, and its corresponding velocity is (-1, -1). D represents going down, and its velocity is (0, -1).}. This indicates that if a person reaches the red cell by taking direction down-left (i.e., coming from upper-right neighboring cell), it is very likely that he or she will change to going down for the next time step. This proves that our way of modeling motion pattern captures human motion dynamics.
 
-\begin{table}[t]
+\begin{table}[H]
 \centering
   \begin{tabular}{c|ccc}
     \hline
@@ -28,7 +53,8 @@ Figure \ref{fig:trajs} shows one example of map window as network input and its 
 \label{table:nos}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[hp]
+\centering
 \begin{tabular}{ll}
 \includegraphics[width=0.48\textwidth]{figures/trajs_through_cell.png}
 &
@@ -36,16 +62,16 @@ Figure \ref{fig:trajs} shows one example of map window as network input and its 
 \end{tabular}
 \caption[one example of map window as network input and its ground truth]{one example of map window as network input and its ground truth \textbf{Left}: The map window has size of \( 32 \times 32 \) cells, with resolution of \( 0.2m/cell\). It also shows trajectories that goes through the red cell. \textbf{Right}: Visualization of conditional probability \( P_c(V^{ex} | V^{en}) \) for the red cell on left map. It can be seen that if a person reaches that cell by taking down-left direction, it is very like that he or she will change direction to going down.}. 
 \label{fig:trajs}
+
+\vspace*{\floatsep}
+
+\includegraphics[width=.7\textwidth]{figures/training_hist.png}
+\caption[Cross entropy loss during network training.]{Cross entropy loss during training. The networks are trained to learn conditional probabilities \( P_c(V^{ex} | V^{en}) \). The blue line shows training dynamics using data generated with 4 directions "left, right, up and down". The yellow line also takes diagonal directions into account, which has 8 directions in total. }
+\label{fig:trainning}
+
 \end{figure}
 
-\begin{figure}[ht]
-  \centering
-    \includegraphics[width=.7\textwidth]{figures/training_hist.png}
-    \caption{Cross entropy loss during training. The networks are trained to learn conditional probabilities \( P_c(V^{ex} | V^{en}) \). The blue line shows training dynamics using data generated with 4 directions "left, right, up and down". The yellow line also takes diagonal directions into account, which has 8 directions in total. }
-    \label{fig:trainning}
-\end{figure}
-
-Practically, the hyperparameters of a neural network, such as learning rate and weight decay, are optimized by random search. However, due to time limitation, this step is skipped in this thesis work. Instead, we use the hyperparamters from a similar network (the only difference is the output layer) that is optimized for predicting average human occupancy on static map. The network is trained with mini-batches of size of 128, and  is optimized with Adam optimizer \citep{Kingma2014Adam}. The training runs for 100 epochs, with early stopping patience of 15 epochs. The best model is selected based on the KL-divergence on validation data.
+Practically, the hyperparameters of a neural network, such as learning rate and weight decay, are optimized by random search. However, due to time limitation, this step is skipped in this thesis work. Instead, we use the hyperparamters from a similar network (the only difference is the output layer) that is optimized for predicting average human occupancy on static map. The network is trained with mini-batches of size of 128, and  is optimized with Adam optimizer \citep{Kingma2014Adam}. The training runs for 100 epochs, with early stopping patience of 15 epochs. The best model is selected based on their performance on validation data.
 
  Figure \ref{fig:trainning} shows the cross entropy loss during training. We trained networks for two cases: 4 directions and 8 directions. The 4-direction case considers only "left, right, up and down". Therefore, the dimension of its output is $32 \times 32 \times 16$. The 8-direction case considers also diagonal directions, therefore the output dimension is $32 \times 32 \times 64$. The loss curves show that the hyperparameters are set correctly since the loss decreases exponentially in the early stage and keeps decreasing afterwards. Naturally, more directions implies higher complexity, thus the overall loss for yellow line is higher than blue line. The cross entropy on the test set is listed in Table \ref{table:loss_on_test}.
 
@@ -62,7 +88,7 @@ Practically, the hyperparameters of a neural network, such as learning rate and 
 \label{table:loss_on_test}
 \end{table}
 
-\section{Evaluation of Tracking Performance}
+\section{Evaluation of Tracking Performance} \label{sec:eval_tracking}
 
 Our method BOFMP is proposed for human tracking in indoor environment. It is similar to BOFUM, and we claim it improves BOFUM since it is able to predict occupancy according to human motion pattern. To verify our claim, we compare the performance of BOFUM and BOFMP in two scenarios:
 
@@ -73,7 +99,7 @@ Our method BOFMP is proposed for human tracking in indoor environment. It is sim
 
 These two stages can be illustrated as:
 \[\text{start} \rightarrow \text{tracking stage} \xrightarrow{\text{measurement lost}} \text{future prediction stage} \rightarrow \text{end}\]
-In this thesis, we set $t_{lost}=9$ and $n=8$, i.e., both tracking and future prediction stage lasts for 8 time steps. The parameters of filters are tuned based on their performance in \textit{future predictions} stage. 
+Note that we are more interested in the future prediction stage, since accurate predictions rely on an accurate motion model and it represents the scenarios when occlusion happen. In this thesis, we set $t_{lost}=9$ and $n=8$, i.e., both tracking and future prediction stage lasts for 8 time steps. The parameters of filters are tuned based on their performance in \textit{future predictions} stage. 
 
   % The measurement is lost at time step \( t=9\), and we select the best set of parameters based on the average of average precisions for the next \( 8 \) time steps. 
 
@@ -147,22 +173,21 @@ Figure \ref{fig:tracking_simulated_data} shows how BOFUM and BOFMP perform track
     \includegraphics[width=.8\textwidth]{figures/test_on_simulated_data.png}
     \caption[Evaluation results on simulated test data.]{Evaluation results on simulated test data. The tracking stage lasts from $t=1:8$, and future prediction starts from $t=9$. One can see that in both stages, our proposed BOFMP outperforms BOFUM for almost every time step.}
     \label{fig:simulated_test_data}
-\end{figure}
 
-\begin{figure}[H]
-  \centering
+    \vspace*{\floatsep}
+
     \includegraphics[width=\textwidth]{figures/tracking_sample_for_simulated_data.png}
-    \caption{One example of tracking case from test data. A person is walking from the lower door to the door in the upper right corner. The measurement is lost at $t=9$. For BOFUM, it predicts most occupancies going upwards. For our BOFMP, since it has knowledge on the human motion model, it predicts occupancies to all possible directions, such as going to the door in the upper right corner, the door on the left and empty space on the right.}
+    \caption[One example of tracking case from simulated test data.]{One example of tracking case from test data. A person is walking from the lower door to the door in the upper right corner. The measurement is lost at $t=9$. For BOFUM, it predicts most occupancies going upwards. For our BOFMP, since it has knowledge on the human motion model, it predicts occupancies to all possible directions, such as going to the door in the upper right corner, the door on the left and empty space on the right.}
     \label{fig:tracking_simulated_data}
 \end{figure}
 
-\subsection{On real data}
+\subsection{Tracking On Real Data}
 
 Table \ref{table:param_range_real} shows the value ranges from which the filter parameters are sampled. Note that value range of noise variance $\delta^2$ for real data is higher than that for simulated data. This is because in real data, there are higher uncertainties with human motion and sensor failures.
 
 \begin{table}[H]
 \centering
-  \begin{tabular}{c|c|}
+  \begin{tabular}{c|c}
     \hline
      &  value range for real data \\ \hline
     \( e \) &  \( \{3, 5, 7\} \)\\
@@ -182,7 +207,7 @@ The simulated trajectories do not always reflect real human motion patterns. Thi
   \centering
    \captionsetup{width=\linewidth}
     \includegraphics[width=.6\textwidth]{figures/blur_idea.png}
-    \caption{A turn on simulated human trajectory. In order to reach the goal location in upper left corner, the simulated trajectory shows that a person will make a turn from going up to going up-left at location indicated by the red square. However, in real scenarios, a person is more flexible in deciding where to make that turn and he might turn at any location in the green area.}
+    \caption[A turn on simulated human trajectory.]{A turn on simulated human trajectory. In order to reach the goal location in upper left corner, the simulated trajectory shows that a person will make a turn from going up to going up-left at location indicated by the red square. However, in real scenarios, a person is more flexible in deciding where to make that turn and he might turn at any location in the green area.}
     \label{fig:blur_idea}
 \end{figure}
 
@@ -215,6 +240,7 @@ where $G \sim \mathcal{N}(\mathbf{0}, \Sigma)$ is a 2-dimensional discrete Gauss
 \label{table:spatial_blur_param_range}
 \end{table}
 
+\newpage
 \textbf{Motion keeping for future prediction}
 
 Our proposed BOFMP, just like BOFUM, is \textit{memory-less}. That is to say, the last time step of tracking stage has absolute influence on future predictions, and the time steps before the last step has no influence at all. In the real data we recorded, a time step equals to 0.25 second in real time. However, this short period of time is not able to summarize a person's motion in the past time steps. Therefore, we propose to add moving average velocity of last few times steps to the predicted velocity $P(V_{pred})$ (which is $P(\hat{V})$ in Equation \ref{eq:adding_noise}), and then calculate next velocity $P(V)$ from it. This process of incorporating moving average velocity is called as \textit{motion keeping}. It starts from the beginning of future prediction stage ($t=9$ in our setting) and the influence of moving average velocity is exponentially decreased for the later time steps.
@@ -246,16 +272,13 @@ The value ranges of these parameters are listed in Table \ref{table:motion_keepi
 \label{table:motion_keeping_param_range}
 \end{table}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/moving_average_tracking.png}
 \includegraphics[width=\textwidth]{figures/moving_average_tracking_velocities_1.png}
-\caption{\textbf{Up}: Three tracking steps of BOFMP with motion keeping. A person is walking from upper left towards lower right. The measurement is lost at $t=9$. \textbf{Down}: Velocities of the cell pointed by the red arrow at $t=8$. On each plot, the most possible direction is shown by green arrows. Based on measurements from $t=7$ and $t=8$, the predicted velocity $P(V_{pred})$ shows it is more likely the occupancy will propagates towards right for the next time step. However, the motion trend, which is represented by $P(V_{ma})$, shows it is more likely to move to lower right. As a consequence, BOFMP with motion keeping shows there are possibilities going both right and lower right, which is more realistic in this tracking example.}
+\caption[A tracking example of BOFMP with motion keeping.]{\textbf{Up}: Three tracking steps of BOFMP with motion keeping. A person is walking from upper left towards lower right. The measurement is lost at $t=9$. \textbf{Down}: Velocities of the cell pointed by the red arrow at $t=8$. On each plot, the most possible direction is shown by green arrows. Based on measurements from $t=7$ and $t=8$, the predicted velocity $P(V_{pred})$ shows it is more likely the occupancy will propagates towards right for the next time step. However, the motion trend, which is represented by $P(V_{ma})$, shows it is more likely to move to lower right. As a consequence, BOFMP with motion keeping shows there are possibilities going both right and lower right, which is more realistic in this tracking example.}
 \label{fig:keep_motion_idea}
 \end{figure}
-
-
-We randomly sample 100 sets of parameters for each scenario, evaluate them on training set, and select the best set of parameters based on the mean of average precisions for the future prediction stage ($t=9:16$). The best parameters are shown in Table \ref{table:best_param_real}.
 
 \begin{table}[H]
 \footnotesize
@@ -273,8 +296,14 @@ We randomly sample 100 sets of parameters for each scenario, evaluate them on tr
 \label{table:best_param_real}
 \end{table}
 
-\normalsize
-Then we apply each filter with its best parameters on test data of 244 scenes. Table \ref{table:real_test_data} lists the average precision in future prediction stage and their mean. Compared with BOFUM, our methods have performance gain of $29\%$, $31\%$ and $43\%$ respectively. Figure \ref{fig:real_test_data} shows the average precision for each time step. One can see that, as in the case of simulated data, average precision starts with values close to zero, and increase rapidly over the next two time steps. From $t=3$ to $t=8$, average precisions keep rather stable at high values, which proves that filters predict very well for the next immediate step. In future prediction stage ($t=9:16$), average precisions decrease severely as time horizon increases, since the state of the world becomes more uncertain. However, our BOFMP and its variants are still better than their baseline BOFUM for every time step in the future prediction stage.
+We randomly sample 100 sets of parameters for each scenario, evaluate them on training set, and select the best set of parameters based on the mean of average precisions for the future prediction stage ($t=9:16$). The best parameters are shown in Table \ref{table:best_param_real}.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\textwidth]{figures/tracking_sample_for_real_data_1.png}
+    \caption[One example of tracking case from real test data.]{One example of tracking case from real test data. A person is walking from upper right corner to the empty space on the left. The measurement is lost at $t=9$. The most likely areas predicted by filters are indicated by the dashed blue oval. For BOFUM, it predicts most occupancies going down-left. For our BOFMP, since it has knowledge on the human motion model, it predicts occupancies to both empty space on the left and the door on the bottom. This improves the average precision as shown in the figure. }
+    \label{fig:tracking_real_data}
+\end{figure}
 
 \begin{table}[H]
 \footnotesize
@@ -291,17 +320,31 @@ Then we apply each filter with its best parameters on test data of 244 scenes. T
 \caption{Future predictions for BOFUM and BOFMP on real data.}
 \label{table:real_test_data}
 \end{table}
-\normalsize
+
+Then we apply each filter with its best parameters on test data of 244 scenes. One example of tracking on real test scene is shown in Figure \ref{fig:tracking_real_data}. Table \ref{table:real_test_data} lists the average precision in future prediction stage and their mean. Compared with BOFUM, our methods have performance gain of $29\%$, $31\%$ and $43\%$ respectively. 
+
+Figure \ref{fig:real_test_data} shows the average precision for each time step. One can see that, as in the case of simulated data, average precision starts with values close to zero, and increase rapidly over the next two time steps. From $t=3$ to $t=8$, average precisions keep rather stable at high values, which proves that filters predict very well for the next immediate step. In future prediction stage ($t=9:16$), average precisions decrease severely as time horizon increases, since the state of the world becomes more uncertain. However, our BOFMP and its variants are still better than their baseline BOFUM for every time step in the future prediction stage.
 
 \begin{figure}[ht]
   \centering
-   \captionsetup{width=\linewidth}
+
     \includegraphics[width=.8\textwidth]{figures/test_on_real_data.png}
-    \caption{Evaluation results on real test data. In the future prediction stage, our BOFMP and its variants are better than their baseline BOFUM for every time step, i.e., $t=9:16$.}
+    \caption[[Evaluation results on real test data. ]{Evaluation results on real test data. In the future prediction stage, our BOFMP and its variants are better than their baseline BOFUM for every time step, i.e., $t=9:16$.}
     \label{fig:real_test_data}
+
 \end{figure}
 
-\section{Applications}
+
+% \begin{figure}[ht]
+%   \centering
+%    \captionsetup{width=\linewidth}
+%     \includegraphics[width=.8\textwidth]{figures/test_on_real_data.png}
+%     \caption[Evaluation results on real test data. ]{Evaluation results on real test data. In the future prediction stage, our BOFMP and its variants are better than their baseline BOFUM for every time step, i.e., $t=9:16$.}
+%     \label{fig:real_test_data}
+% \end{figure}
+
+
+\section{Applications} \label{sec:application}
 
 \subsection{Future Occupancy Prediction}
 
@@ -310,18 +353,20 @@ Embedded with an accurate motion model of the tracking objects, our proposed BOF
 \begin{figure}[ht]
   \centering
     \includegraphics[width=\textwidth]{figures/idea.png}
-    \caption{Occupancy predictions for BOFUM and our proposed BOFMP after several time steps without measurements. The map shows a Y-fork. At $t=0$, a person is shown as a red rectangle and with initial velocity towards left. At $t=15$, the person encounters intersection. BOFUM has no information about human motion pattern, and continues to propagate occupancy towards left. Our BOFMP knows that humans are likely to turn to either upper or lower corridors. At $t=30$, since occupancies going left vanish due to the wall, BOFUM predicts occupancies in corridors, but they are biased towards walls on the left. Our BOFMP predicts more occupancies in the middle of corridors, since it knows humans are more likely to walk in the middle.}
+    \caption[Occupancy predictions for BOFUM and our proposed BOFMP.]{Occupancy predictions for BOFUM and our proposed BOFMP after several time steps without measurements. The map shows a Y-fork. At $t=0$, a person is shown as a red rectangle and with initial velocity towards left. At $t=15$, the person encounters intersection. BOFUM has no information about human motion pattern, and continues to propagate occupancy towards left. Our BOFMP knows that humans are likely to turn to either upper or lower corridors. At $t=30$, since occupancies going left vanish due to the wall, BOFUM predicts occupancies in corridors, but they are biased towards walls on the left. Our BOFMP predicts more occupancies in the middle of corridors, since it knows humans are more likely to walk in the middle.}
     \label{fig:idea}
 \end{figure}
 
-\subsection{Dynamic Analysis}
-\subsection{Predict Occupied Area}
+\subsection{Predict Frequently Occupied Area}
+Nowadays, more and more robots are entering human populated environments. In order to successfully execute their jobs, robots need to act in a socially compliant way. Understanding which areas in the environment are frequently occupied by human could be very helpful for robots to act in these environment. For example, robots can make use of this information to find non-disturbing waiting position or avoid crowded areas when plan a path. 
+
+Our BOFMP filter can also be used to predict frequently occupied areas in a static map. Firstly, we initialize the state of the world, i.e., $P(O) and P(V)$, with uniform distribution according to Equation \ref{eq:init_O} and \ref{eq:init_V}. Without given any measurement, the filter is applied repeatedly until the values of $P(O)$ and $P(V)$ do not change, or change with slight differences. At this point, one can see from $P(O)$ which areas are more frequently occupied as shown in Figure \ref{fig:average_occupancy_pred}. This is achieved thanks to that our motion model leads the occupancy to places where human tend to walk through. Note the absolute values of $P(O)$ does not make too much sense. However, the relative values of $P(O)$ between cells give us enough information on deciding which areas are more crowded than others. 
 
 \begin{figure}[ht]
   \centering
     \includegraphics[width=\textwidth]{figures/average_occupancy_3.png} \\
     \includegraphics[width=\textwidth]{figures/average_occupancy_4.png} \\
-    \caption[Average occupancy prediction on static map]{Average occupancy prediction on static map.} 
+    \caption[Predictions of frequently occupied areas in static maps.]{Predictions of frequently occupied areas in static maps. Redder color indicates higher probabilities of being occupied. For both maps, $P(O)$ and $P(V)$ are uniformly initialized and the BOFMP runs for 31 time steps. One can see that the middle areas of corridors are more likely to be occupied.} 
     \label{fig:average_occupancy_pred}
 \end{figure}
 

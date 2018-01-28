@@ -1,5 +1,7 @@
 \select@language {english}
 \contentsline {chapter}{Contents}{ix}{chapter*.6}
+\contentsline {chapter}{List of Figures}{xi}{chapter*.7}
+\contentsline {chapter}{List of Tables}{xiii}{chapter*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Object Tracking}{7}{section.2.1}
@@ -7,7 +9,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Human Motion Modeling}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Dynamic Environment Modeling}{11}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Neural Networks}{13}{section.2.3}
-\contentsline {chapter}{\numberline {3}Background Knowledge}{17}{chapter.3}
+\contentsline {chapter}{\numberline {3}Theoretical Background}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Bayesian Occupancy Filter}{17}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Bayesian Filtering}{17}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}BOFUM Formulation}{18}{subsection.3.1.2}
@@ -26,17 +28,15 @@
 \contentsline {chapter}{\numberline {5}Results and Discussions}{45}{chapter.5}
 \contentsline {section}{\numberline {5.1}Metrics}{45}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Metrics for Neural Network}{45}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Metrics for Tracking}{45}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Training of Neural Network}{45}{section.5.2}
-\contentsline {section}{\numberline {5.3}Evaluation of Tracking Performance}{48}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Overview of Datasets}{48}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Tracking on Simulated Data}{48}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}On real data}{52}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Applications}{57}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Future Occupancy Prediction}{57}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Dynamic Analysis}{58}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Predict Occupied Area}{58}{subsection.5.4.3}
-\contentsline {chapter}{\numberline {6}Conclusions and Outlooks}{59}{chapter.6}
-\contentsline {section}{\numberline {6.1}End to End Training}{59}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{59}{section.6.2}
-\contentsline {chapter}{Bibliography}{61}{appendix*.47}
+\contentsline {subsection}{\numberline {5.1.2}Metrics for Tracking}{46}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Training of Neural Network}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}Evaluation of Tracking Performance}{49}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Overview of Datasets}{49}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Tracking on Simulated Data}{51}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Tracking On Real Data}{52}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Applications}{58}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Future Occupancy Prediction}{58}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Predict Frequently Occupied Area}{58}{subsection.5.4.2}
+\contentsline {chapter}{\numberline {6}Conclusions and Outlooks}{61}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future Work}{62}{section.6.1}
+\contentsline {chapter}{Bibliography}{63}{appendix*.48}

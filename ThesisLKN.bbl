@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{46}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -88,6 +88,12 @@ Jinwei Gu Xiaodong Yang~Shalini De and Mello~Jan Kautz.
 Alberto Elfes.
 \newblock Using occupancy grids for mobile robot perception and navigation.
 \newblock \emph{Computer}, 22\penalty0 (6):\penalty0 46--57, 1989.
+
+\bibitem[Flach and Kull(2015)]{flach2015precision}
+Peter Flach and Meelis Kull.
+\newblock Precision-recall-gain curves: Pr analysis done right.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  838--846, 2015.
 
 \bibitem[Fod et~al.(2002)Fod, Howard, and Mataric]{fod2002laser}
 Ajo Fod, Andrew Howard, and MAJ Mataric.
