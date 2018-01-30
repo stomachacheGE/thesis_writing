@@ -1,7 +1,7 @@
 %!TEX root = ThesisLKN.tex
 \chapter{Theoretical Background} \label{chapter:3}
 
-This chapter introduces the theoretical background of this thesis, which mainly concerns two distinct parts: Bayesian Occupancy Filter (BOF) and Convolutional Neural Network. In Section \ref{sec:bayes_filtering}, we start with introduction to the idea of Bayesian filtering. BOF is naturally introduced in Section \ref{sec:bof}, since it is an extension of Bayesian filtering on occupancy grid for object tracking. To better adapt BOF to human tracking context, Section \ref{sec:bofmp} explains how our human motion model can be seamlessly incorporated into the BOF framework. In Section \ref{sec:cnn}, we firstly introduce the general structure of CNNs, and the state-of-the-art densely connected CNNs (DenseNets) are explained in Section \ref{sec:dense_net}. To exploit the power of DenseNets for networks that produce \textit{pixel-wise} predictions , the fully convolution DenseNets with upsampling path are introduced in Section \ref{sec:fc_dense_net}. In Section \ref{sec:metrics}, different metrics for evaluating the performance of tracking are discussed. The arguments for our choice of metrics used in this thesis are also provided. 
+This chapter introduces the theoretical background of this thesis, which mainly concerns two distinct parts: Bayesian Occupancy Filter (BOF) and Convolutional Neural Network. In Section \ref{sec:bayes_filtering}, we start with introduction to the idea of Bayesian filtering. BOF is naturally introduced in Section \ref{sec:bof}, since it is an extension of Bayesian filtering on occupancy grid for object tracking. To better adapt BOF to human tracking context, Section \ref{sec:bofmp} explains how our human motion model can be seamlessly incorporated into the BOF framework. In Section \ref{sec:cnn}, we firstly introduce the general structure of CNNs, and the state-of-the-art densely connected CNNs (DenseNets) are explained in Section \ref{sec:dense_net}. To exploit the power of DenseNets for networks that produce \textit{pixel-wise} predictions , the fully convolutional DenseNets with upsampling path are introduced in Section \ref{sec:fc_dense_net}. 
 
 \section{Bayesian Occupancy Filter} 
 
@@ -15,19 +15,19 @@ Bayesian filters work in a dynamic system. At any time $t$, the true state $x_t$
 z_t = h_t(x_t, \omega_t)
 \end{equation}
 
-where $h_t$ is normally given in this context and called as \textit{observation model}, $\omega_t$ is known as \textit{measurement noise}. The true state $x_t$ evolves from last state $x_{t-1}$ based on a \textit{process model} $f_t$:
+where $h_t$ is known as \textit{observation model}, and $\omega_t$ is \textit{measurement noise}. The true state $x_t$ evolves from last state $x_{t-1}$ based on a \textit{process model} $f_t$:
 
 \begin{equation}
 x_t = f_t(x_{t-1}, v_{t-1})
 \end{equation}
 
-where variable $v_{t}$ is called as \textit{process noise}. This equation describes a \textit{Markov process} with order one, since current state $x_t$ does not depend on past states of $x_{1:t-2}$ and only depends on last state $x_{t-1}$. For a dynamic system, the goal of Bayesian filtering is to recursively estimate the \textit{posterior} probability distribution, $P(x_t|z_{1:t})$. This is done in two steps: \textit{prediction} and \textit{estimation}. In the prediction step, a \textit{prior} distribution on the state of the system is calculated based on posterior distribution from last time step and the process model. In the estimation step, the prior distribution is used with new measurements to calculate  posterior distribution on the current state.
+where variable $v_{t}$ is called \textit{process noise}. This equation describes a \textit{Markov process} with order one, since current state $x_t$ only depends on last state $x_{t-1}$ and does not depend on past states $x_{1:t-2}$ . For a dynamic system, the goal of Bayesian filtering is to recursively estimate the \textit{posterior} probability distribution $P(x_t|z_{1:t})$. This is done in two steps: \textit{prediction} and \textit{estimation}. In the prediction step, a \textit{prior} distribution on the state of the system is calculated based on posterior distribution from last time step and the process model. In the estimation step, the prior distribution is corrected by new measurements to calculate posterior distribution on the current state.
 
 \subsection{BOFUM Formulation} \label{sec:bof}
 
-BOF, similar to Bayesian filer, consists of two stages of \textit{prediction} and \textit{estimation}. Bayesian Occupancy Filter (BOF) can be applied on robots to reason about the dynamic environment, which in this context is represented by occupancy grid. Applications of BOF include collision avoidance \citep{coue2006bayesian} and object tracking \citep{chen2006dynamic}.
+BOF, similar to Bayesian filer, consists of two stages: \textit{prediction} and \textit{estimation}. Bayesian Occupancy Filter (BOF) can be applied on robots to reason about the dynamic environment, which in this context is represented by occupancy grid. Applications of BOF include collision avoidance \citep{coue2006bayesian} and object tracking \citep{chen2006dynamic}.
 
-Historically, based on different representations of the cell's state space, there are two formulations of BOF: 4D-BOF and 2D-BOF. In 4D-BOF, each cell has four dimensions, with two dimensions representing its position on the gird, and the other two representing the orthogonal velocity components \citep{coue2006bayesian}. While for 2D-BOF, cells are organized as in a 2-dimensional occupancy grid, and each cell is associated with probability distributions of its velocity. The advantage of 4D-BOF is that it is able to represent overlapping objects with different velocities. However, 4D-BOF is more computationally expensive and it is not able to estimate cell's velocity. On the contrary, 2D-BOF dose not allow overlapping objects but requires less computations and is able to infer velocities. In this thesis, we follow the 2D-BOF formulation as proposed by \citet{gindele2009bayesian}, which extends original 2D-BOF using prior map knowledge (BOFUM) as an indicator of motion preference. 			
+Historically, based on different representations of the cell's state space, there are two formulations of BOF: 4D-BOF and 2D-BOF. In 4D-BOF, each cell has four dimensions, with two dimensions representing its position on the grid, and the other two representing the orthogonal velocity components \citep{coue2006bayesian}. While for 2D-BOF, cells are organized as in a 2-dimensional occupancy grid, and each cell is associated with probability distributions of its velocity. The advantage of 4D-BOF is that it is able to represent overlapping objects with different velocities. However, 4D-BOF is more computationally expensive and it is not able to estimate cell's velocity. On the contrary, 2D-BOF dose not allow overlapping objects but requires less computations and is able to infer velocities. In this thesis, we follow the 2D-BOF formulation that is proposed by \citet{gindele2009bayesian}, who extend original 2D-BOF using prior map knowledge (BOFUM) as an indicator for motion preference. 			
 
 We start the formulation of BOFUM by introducing relevant random variables. The subscript $n$ of each random variable represents the cell index on the grid map. We assume there are $N$ cells in total. For time step $t$, we define:
 
@@ -35,7 +35,7 @@ We start the formulation of BOFUM by introducing relevant random variables. The 
 \item[] $O:$ Vector for occupancy state of all cells. Each element $O_n$ takes two possible values, $occ$ and $nocc$.
 \[ O = (O_1, \ ... \ , \ O_N)^T \in \{ occ, nocc\}^n \]
 
-\item[] $V:$ Vector for velocities in $x$ and $y$ directions. Velocities are discretized into cells, which have unit of $cells/timestep$.
+\item[] $V:$ Vector for velocities in $x$ and $y$ directions. Velocities are discretized into cells, therefore have unit of $cell/timestep$.
 \[ V = (V_1, \ ... \ , \ V_N)^T \in \{ \mathbb{Z}, \mathbb{Z}\}^n \]
 
 \item[] $X:$ Combination of both occupancy and velocity. 
@@ -56,7 +56,7 @@ We start the formulation of BOFUM by introducing relevant random variables. The 
 In our context, we use no sensors for measuring velocities. Therefore, $Z_v$ will be omitted.
 \end{my_enumerate}
 
-We assume that cells are independent to each other. This simplifies the formulation and also makes the implementation of BOF highly parallelisable. The goal of BOF is to estimate the posterior probability distribution of the state of a specific cell $c$ given measurement $Z$:
+We assume that cells are independent to each other. This simplifies the formulation and also makes the implementation of BOF highly parallelizable. The goal of BOF is to estimate the posterior probability distribution of the state of a specific cell $c$ given measurement $Z_c$:
 \begin{align}
 P(X_c|Z_c) &= \frac{P(X_c, Z_c)}{P(Z_c)} \label{eq:1} \\ 
          &= \frac{\sum_{X^-, R, T}{P(X_c, X^-, R, T, Z_c)}}{\sum_{X^-, R, T, X_c}{P(X_c, X^-, R, T, Z_c)}} 
@@ -115,7 +115,7 @@ $P(X^-, R, T)$ is the joint distribution for transition. By assuming occupancy a
 P(X^-, R, T) &= P(O^-, V^-, R, T) \\
              &= \prod_{i \in N} P(O_i^-) \prod_{j \in N} P(T_j, V^-, R)
 \end{align}
-Since we assume \textit{Occupancy preservation}, occupancy of an antecedent cell $a$ must propagate to follower cells m. This introduces a normalization coefficient $\mu$:
+Since we assume \textit{Occupancy preservation}, occupancy of an antecedent cell $a$ must propagate to follower cells $m$. This introduces a normalization coefficient $\mu$:
 \begin{align}
 P(T_a=c, V^-, R) &= \frac{P(T_a=c, V^-_a, R_{a,c})}{\sum_{m \in N}P(T_a=m, V^-_a, R_{a,m})} \\
                  &= \mu_a P(V_a^-) P(R_{a,c})P(T_a=c|V_a^-, R_{a, c}) \label{eq:t}
@@ -139,7 +139,7 @@ P(Z_{O,c}=z_c|X_C) &= P(Z_{O,c}=z_c|O_C) \\
 				   \omega_Z,   & else
 				   \end{cases}
 \end{align}
-where $\omega_Z \in [0,1]$ and higher its value, more confident we are in measurements. 
+where $\omega_Z \in [0,1]$ and higher its value, less confident we are in the measurements. 
 \end{my_enumerate}
 
 \begin{figure}[ht]
@@ -194,19 +194,19 @@ P(O_c=occ) &= 1 - P(O_c=nocc) \\
 
 \subsection{BOF with Motion Pattern (BOFMP)} \label{sec:bofmp}
 
-In the above formulation of BOFUM, if occupancy propagates from an antecedent cell $a$ to cell $c$ with velocity $v(a,c)$, cell $c$ will propagate the occupancy with the same velocity $v(a,c)$ along with zero-mean acceleration noise. In other words, BOFUM assumes a constant velocity motion model with uncertain zero-acceleration. In reality, object actually follows some motion patterns based on its location on the map. For example, a car driving on a lane are more likely to drive along the lane instead of driving to sidewalks. Therefore, \citet{gindele2009bayesian} incorporate this motion preference into the reachability matrix $R$.
+In the above formulation of BOFUM, if we do not consider acceleration noise and occupancy propagates from an antecedent cell $a$ to cell $c$ with velocity $v(a,c)$, cell $c$ will propagate the occupancy with the same velocity $v(a,c)$. In other words, BOFUM assumes a constant velocity motion model with uncertain zero-acceleration. In reality, object actually follows motion patterns based on its location on the map. For example, a car driving on a lane are more likely to drive along the lane instead of driving to sidewalks. To capture this intuition, \citet{gindele2009bayesian} incorporate motion preference into the reachability matrix $R$.
 
-For a cell $c$ on the occupancy gird, they assign a terrain type for each cell with a helper function $u$. In their automotive application, they define three terrain types: $U=\{lane, sidewalks, unknown\}$. The reachability probability between cell $a$ and cell $c$ can be calculated as:
+For a cell $c$ on the occupancy grid, they assign a terrain type for each cell with a helper function $u$. In their automotive application, they define three terrain types: $U=\{lane, sidewalks, unknown\}$. The reachability probability between cell $a$ and cell $c$ can be calculated as:
 \begin{equation}
 P(R_{a,c}=reach) = S_{u(a), u(c)} \omega(a, c) \label{eq:reachability}
 \end{equation}
 where matrix $S\in[0,1]^{U\times U}$ defines the likelihood of change terrain types, and $\omega: N \times N \rightarrow [0,1]$ captures the likelihood of the movement when both cells are in the same terrain type or when the distance between these two cells has influence on the likelihood.
 
-However, their way of modeling place dependent motion patterns has two disadvantages: 1) Manually classifying terrain types might be reasonable in their automotive applications, but it is not feasible in our human tracking scenarios. Although indoor environment, like offices and factories, can be classified as \textit{walkable} or \textit{not walkable}, this kind of classification does not provide too much information on motion preference. 2) As shown in Equation \ref{eq:reachability}, the $S$ matrix and weight function $\omega$ have to be manually defined. When an object is being tracked, the environment is updated rapidly, which requires to update the reachability matrix at the same time. Besides, when large maps are considered, it requires a lot of manual work to define function $\omega$ since any two cells on the grid map have to be considered. Therefore, defining reachability is very time consuming and inflexible. 
+However, their way of modeling place dependent motion patterns has two disadvantages: 1) Manually classifying terrain types might be reasonable in their automotive applications, but it is not feasible in our human tracking scenarios. Although indoor environments, like offices and factories, can be classified as \textit{walkable} or \textit{not walkable}, this kind of classification provide too less information on motion preference. 2) As shown in Equation \ref{eq:reachability}, the $S$ matrix and weight function $\omega$ have to be manually defined. When an object is being tracked, the environment is updated rapidly, which requires to update the reachability matrix with a high frequency. Besides, when large maps are considered, it requires a lot of manual work to define function $\omega$ since any two cells on the grid map have to be considered. Therefore, defining reachability is very time consuming and inflexible. 
 
-To deal with the mentioned disadvantages, we propose to model motion patterns in a \textit{learning-based} way. Although we apply this method only on modeling human motion patterns in indoor environment, it can be also used in other scenarios, such as modeling car motion pattern in outdoor environment. The idea is to train a neural network based on relevant data extracted from human trajectories. Once the network finished training, it learns the implicit motion patterns that are imposed on the human trajectories used for training. For a given gird map, the network is able to output data that can be interpreted as motion patterns without human intervention. This facilitates its application on real scenarios even in rapidly changing environments.   
+To deal with the mentioned disadvantages, we propose to model motion patterns in a \textit{learning-based} way. Although we apply this method only on modeling human motion patterns in indoor environment, it can be also used in other scenarios, such as modeling car motion pattern in outdoor environment. The idea is to train a neural network based on relevant data extracted from human trajectories. Once the network finished training, it learns the implicit motion patterns that are imposed on the human trajectories used for training. For a given grid map, the network is able to output data that can be interpreted as motion patterns without human intervention. This facilitates its application in real scenarios even with rapidly changing environments.   
 
-The relevant data we extracted from human trajectories can be used as an proxy of human motion patterns. They are represented as a set of conditional probabilities for every cell on the map. They represent how likely a person moves to one of the neighboring cells (exit direction), conditioned on which neighboring cell he or she comes from (entering direction). Mathematically, for any cell $c \in [1,N]$ on the gird map, they can be expressed as
+The relevant data we extracted from human trajectories can be used as an proxy of human motion patterns. They are represented as a set of conditional probabilities for every cell on the map. They represent how likely a person moves to one of the neighboring cells (exit direction), conditioned on which neighboring cell he or she comes from (entering direction). Mathematically, for any cell $c \in [1,N]$ on the grid map, they can be expressed as
 \begin{equation}
 P_c(V^{ex}|V^{en}) 
 \end{equation}
@@ -217,7 +217,7 @@ Figure \ref{fig:condi_prob_example} shows an example of how our model captures m
 \begin{figure}[ht]
   \centering
     \includegraphics[width=.85\textwidth]{figures/bofmp_example.png}
-    \caption[An example of our proposed motion model.]{An example of our proposed motion model. \textbf{LEFT}: A person is at location indicated by green rectangle. White area is walkable. The green arrow and red arrows show entering and exit directions. \textbf{RIGHT}: The motion pattern at that cell represented as $P_c(V^{ex}|V^{en}=L)$. It shows that, for the next time step, this person is more likely to turn either up-left or down-left than keep its entering direction of going left.}
+    \caption[An example of our proposed motion model.]{An example of our proposed motion model. \textbf{LEFT}: A person is at location indicated by the green rectangle. White area is walkable. The blue arrow and red arrows show entering and exit directions. \textbf{RIGHT}: The motion pattern at that cell represented as $P_c(V^{ex}|V^{en}=L)$. It shows that, for the next time step, this person is more likely to turn either up-left or down-left than keep going left.}
     \label{fig:condi_prob_example}
 \end{figure}
 
@@ -227,7 +227,7 @@ P(V_c) = \sum_{\hat{V_c}}{P_c(V^{ex}=V_c|V^{en}=\hat{V_c})P(\hat{V_c})} \label{e
 \end{equation}
 where $P_c(V^{ex}|V^{en})$ is \textit{cell-specific} motion pattern. In this ways, the BOFMP knows how to propagate occupancies according to human motion pattern at certain locations. When compared with BOFUM, this method leads to better tracking performance especially when no observations are given or in occluded scenarios.
 
-In this section, we assume the maximum velocity of the object is 1 $cell/timestep$. In reality, the objects may perform higher velocities. However, our neural network that extracts motion patterns models only velocity of 1 $cell/timestep$. The method of how we adapt our motion model to higher velocities will be explained in Section \ref{sec:BOFMP_implementation}.
+In this section, we assume the maximum velocity of the object is 1 $cell/timestep$. In reality, the objects may perform higher velocities. However, the neural network used for extracting motion pattern only models velocity of 1 $cell/timestep$. The method of how we adapt the extracted motion model to higher velocities will be explained in Section \ref{sec:BOFMP_implementation}.
 
 \section{Convolutional Neural Network} \label{sec:cnn}
 

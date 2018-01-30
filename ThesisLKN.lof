@@ -9,13 +9,13 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces A five layer dense block.}}{13}{figure.caption.14}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Comparison between RNN and Bayesian filters.}}{14}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The prediction and estimation loop of BOF.}}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The prediction and estimation loop of BOF.}}{21}{figure.caption.16}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces An example of our proposed motion model.}}{25}{figure.caption.17}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces An illustration of residual learning}}{28}{figure.caption.18}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Downsampling and upsampling in FCNs.}}{29}{figure.caption.19}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Two example maps on which human trajectories are sampled from.}}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Illustration of the fully convolution DenseNet.}}{35}{figure.caption.21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Illustration of the fully convolutional DenseNet.}}{35}{figure.caption.21}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces One example of preprocessing of real data.}}{38}{figure.caption.24}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Application used for labeling scenes.}}{38}{figure.caption.25}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces One example of extending motion pattern probabilities from network output to higher extent.}}{40}{figure.caption.26}
@@ -23,7 +23,7 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces One filtering step of BOFMP filter.}}{42}{figure.caption.28}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Classes defined in the code.}}{44}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces one example of map window as network input and its ground truth}}{48}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces One example of map window as network input and its ground truth}}{48}{figure.caption.31}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Cross entropy loss during network training.}}{48}{figure.caption.31}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Two examples of scenes in simulated training set.}}{50}{figure.caption.33}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Two examples of scenes in real training set.}}{50}{figure.caption.33}
@@ -32,7 +32,7 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces A turn on simulated human trajectory.}}{54}{figure.caption.38}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces A tracking example of BOFMP with motion keeping.}}{56}{figure.caption.41}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces One example of tracking case from real test data.}}{57}{figure.caption.43}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces [Evaluation results on real test data. }}{58}{figure.caption.45}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Evaluation results on real test data. }}{58}{figure.caption.45}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Occupancy predictions for BOFUM and our proposed BOFMP.}}{59}{figure.caption.46}
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Predictions of frequently occupied areas in static maps.}}{60}{figure.caption.47}
 \addvspace {10\p@ }

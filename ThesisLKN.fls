@@ -134,6 +134,8 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/algorithmicx/algpseudocode.st
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/afterpage.sty
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/tools/afterpage.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -240,7 +242,6 @@ INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 OUTPUT Abstract.aux
 INPUT Abstract.tex
 INPUT Abstract.tex
-INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT statement.aux
@@ -254,6 +255,7 @@ INPUT ThesisLKN.toc
 INPUT ThesisLKN.toc
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT ThesisLKN.toc
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
 INPUT ThesisLKN.lof
 INPUT ThesisLKN.lof
 OUTPUT ThesisLKN.lof
@@ -354,9 +356,9 @@ INPUT ./figures/mm_ext_4.png
 INPUT figures/filtering_workflow.png
 INPUT ./figures/filtering_workflow.png
 INPUT ./figures/filtering_workflow.png
-INPUT figures/correction_step.png
-INPUT ./figures/correction_step.png
-INPUT ./figures/correction_step.png
+INPUT figures/correction_step_1.png
+INPUT ./figures/correction_step_1.png
+INPUT ./figures/correction_step_1.png
 INPUT figures/classes.png
 INPUT ./figures/classes.png
 INPUT ./figures/classes.png
@@ -409,9 +411,9 @@ INPUT ./figures/tracking_sample_for_real_data_1.png
 INPUT figures/test_on_real_data.png
 INPUT ./figures/test_on_real_data.png
 INPUT ./figures/test_on_real_data.png
-INPUT figures/idea.png
-INPUT ./figures/idea.png
-INPUT ./figures/idea.png
+INPUT figures/idea_1.png
+INPUT ./figures/idea_1.png
+INPUT ./figures/idea_1.png
 INPUT figures/average_occupancy_3.png
 INPUT ./figures/average_occupancy_3.png
 INPUT ./figures/average_occupancy_3.png

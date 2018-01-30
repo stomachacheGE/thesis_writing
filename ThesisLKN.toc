@@ -1,7 +1,7 @@
 \select@language {english}
-\contentsline {chapter}{Contents}{ix}{chapter*.6}
-\contentsline {chapter}{List of Figures}{xi}{chapter*.7}
-\contentsline {chapter}{List of Tables}{xiii}{chapter*.8}
+\contentsline {chapter}{Contents}{vii}{chapter*.6}
+\contentsline {chapter}{List of Figures}{ix}{chapter*.7}
+\contentsline {chapter}{List of Tables}{xi}{chapter*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Object Tracking}{7}{section.2.1}
@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {3.1.1}Bayesian Filtering}{17}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}BOFUM Formulation}{18}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}BOF with Motion Pattern (BOFMP)}{23}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Convolutional Neural Network}{26}{section.3.2}
+\contentsline {section}{\numberline {3.2}Convolutional Neural Network}{25}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Densely Connected Convolutional Networks }{27}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Fully Convolutional DenseNet}{28}{subsection.3.2.2}
 \contentsline {chapter}{\numberline {4}Implementation Details}{31}{chapter.4}
@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {4.3}Preprocessing of Tracking Data}{37}{section.4.3}
 \contentsline {section}{\numberline {4.4}Implementation of BOFMP}{39}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Extension of Network Output}{39}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Workflow of BOFMP}{41}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}Workflow of BOFMP}{39}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Code Structure}{43}{subsection.4.4.3}
 \contentsline {chapter}{\numberline {5}Results and Discussions}{45}{chapter.5}
 \contentsline {section}{\numberline {5.1}Metrics}{45}{section.5.1}
@@ -36,7 +36,7 @@
 \contentsline {subsection}{\numberline {5.3.3}Tracking On Real Data}{52}{subsection.5.3.3}
 \contentsline {section}{\numberline {5.4}Applications}{58}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Future Occupancy Prediction}{58}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Predict Frequently Occupied Area}{58}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Predict Frequently Occupied Area}{59}{subsection.5.4.2}
 \contentsline {chapter}{\numberline {6}Conclusions and Outlooks}{61}{chapter.6}
 \contentsline {section}{\numberline {6.1}Future Work}{62}{section.6.1}
 \contentsline {chapter}{Bibliography}{63}{appendix*.48}

@@ -57,6 +57,7 @@
 \usepackage{amsmath}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+\usepackage{afterpage}
 
 \usepackage[pdftex,
   bookmarks,
@@ -178,6 +179,10 @@ Supervisor:&  Johannes D\"ollinger\\
 \hspace{40pt}
 \includegraphics[width=.45\textwidth]{figures/bosch_logo.png}
 \end{figure}
+
+\afterpage{\thispagestyle{empty}}
+\cleardoublepage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{roman}
 
@@ -188,17 +193,24 @@ Supervisor:&  Johannes D\"ollinger\\
 % German abstract:
 %\include{Kurzfassung}
 % English abstract:
+
 \include{Abstract}
-
-
+\afterpage{\thispagestyle{empty}}
 \cleardoublepage
+
 \include{statement}
-
+\afterpage{\thispagestyle{empty}}
 \cleardoublepage
+
 \include{foreword}
+\afterpage{\thispagestyle{empty}}
+\cleardoublepage
 
 % Table of contents:
+\thispagestyle{empty}
 \tableofcontents  
+\afterpage{\thispagestyle{empty}}
+\cleardoublepage
 %\include{toc}
 % % Introduction (Einleitung):
 % \include{Introduction}
@@ -212,8 +224,11 @@ Supervisor:&  Johannes D\"ollinger\\
 % \include{Formatting}
 
 \listoffigures
-\listoftables
+\afterpage{\thispagestyle{empty}}
+\cleardoublepage
 
+\listoftables
+\afterpage{\thispagestyle{empty}}
 \cleardoublepage
 \setcounter{page}{1}
 \renewcommand{\thepage}{\arabic{page}}
